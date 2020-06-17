@@ -1,0 +1,173 @@
+#logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.landing-cta {
+  color: whitesmoke;
+  font-weight: 700;
+  font-weight: 1.75rem;
+  text-shadow: 1px 1px 2px #383838;
+}
+
+.headers {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* Landing page background image */
+.landingTop {
+  height: 650px;
+  width: 100%;
+  background-image: url("../images/landing-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.navBarLogo {
+  color: purple !important;
+  font-weight: 700;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.bottom-logo-text {
+  font-size: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red !important;
+  position: absolute;
+  bottom: 0;
+  float: left;
+  left: 0;
+  margin-left: 2rem;
+}
+
+.listItems:hover,
+.nav-link:hover {
+  text-decoration: none !important;
+  background-color: none !important;
+  text-decoration-color: none !important;
+}
+
+.landingSectionTwo {
+  height: 800px;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(91, 192, 222, 0.75) !important;
+}
+
+.program-your-career {
+  justify-content: center !important;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.learnMore:hover {
+  transform: scale(1.1);
+}
+
+.learnMoreBtn {
+  background-color: rgba(128, 0, 128, 0.75) !important;
+  color: whitesmoke !important;
+  font-size: 1.5rem;
+  font-weight: 500 !important;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.learnMoreBtn:hover {
+  transform: scale(1.08);
+}
+
+/* Centered button on landing page other color  */
+.more {
+  color: #5bc0de !important;
+}
+
+.dropdown-toggle {
+  margin-top: 2px !important;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* div.navtoggler {
+  z-index: 1000 !important;
+} */
+
+a:hover {
+  text-decoration: none;
+}
+
+#nprogress .bar {
+  height: 6px !important;
+}
+
+/* Muted text labels in manage categories and tags page */
+.catsTags {
+  font-size: 1.2rem;
+}
+
+.navbar {
+  background-color: white !important;
+  color: purple !important;
+}
+/* 
+Media queries needed to prevent buttons from elongating in collapsible menu */
+/* .authBtns {
+  background-color: #383838;
+  border-radius: 5px;
+  margin: 2px;
+  display: inline-block;
+  padding: auto 1px;
+} */
+
+/* .authBtns {
+  background-color: #5bc0de !important;
+  outline: none !important;
+  text-decoration: none !important;
+} */
+
+.navItems {
+  color: whitesmoke !important;
+  cursor: pointer !important;
+}
+
+/* Menu items in collapsible menu */
+.listItems {
+  color: purple !important;
+  font-weight: 600;
+  margin: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.listItems:hover {
+  transform: scale(1.08) !important;
+}
+
+.landingAuth {
+  color: whitesmoke !important;
+}
+
+.dropdown-menu {
+  background-color: #5bc0de !important;
+  color: whitesmoke !important;
+}
+
+span.navbar-toggler-icon {
+  /* color: whitesmoke !important; */
+  background-color: whitesmoke !important;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.ql-editor {
+  min-height: 300px;
+}
