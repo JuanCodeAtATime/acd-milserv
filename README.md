@@ -1,6 +1,6 @@
 # acd-milserv
 
-Web application design, developmeent, and deployment project for logistics company specializing in alcohol transportation.   
+Web application design, development, and deployment project for logistics company specializing in transportation of craft beer.   
 
 ## Built With
 1. Node.js, MERN Stack, React-Quill, Next.js
