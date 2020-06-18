@@ -1,0 +1,122 @@
+.container {
+  margin: 3rem 0 0 0 !important;
+}
+
+.padding {
+  margin: auto 140px 120px 140px !important;
+}
+
+.card {
+  margin: 0.5rem 0.5rem !important;
+  font-weight: bold !important;
+  height: 165.9px !important;
+  /* min-height: 165.9px !important; */
+  min-width: 165.9px !important;
+  /* min-width: 165.9px !important; */
+  color: #ffffff !important;
+  border-radius: 1px !important;
+  position: relative;
+  cursor: pointer;
+}
+
+.icons {
+  height: 55px;
+  width: 55px;
+  color: #ffffff;
+  margin-bottom: 14.9px;
+}
+
+.addResource {
+  font-weight: 500 !important;
+  display: inline !important;
+  margin-right: 1rem;
+  cursor: pointer;
+  /* line-height: 2px !important; */
+}
+
+.categoryTitle {
+  /* margin-top: 4rem !important; */
+  width: 118.1px !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.11 !important;
+  letter-spacing: normal !important;
+  color: #ffffff !important;
+}
+
+.resourcesQty {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  font-stretch: normal;
+  font-style: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal;
+  color: #ffffff !important;
+  margin-bottom: 5px !important;
+  bottom: 0 !important;
+  vertical-align: bottom !important;
+  position: absolute !important;
+}
+
+.emergency {
+  background-color: #335b55 !important;
+  color: whitesmoke !important;
+  font-weight: bold !important;
+}
+
+.risk {
+  background-color: #f7cb0f !important;
+  color: whitesmoke !important;
+  font-weight: bold !important;
+}
+
+.casefinding {
+  background-color: #179c48 !important;
+  color: whitesmoke !important;
+}
+
+.surveillance {
+  background-color: #d04e37 !important;
+  color: whitesmoke !important;
+  font-weight: bold !important;
+}
+
+.ph {
+  background-color: #94194c !important;
+  color: whitesmoke !important;
+  font-weight: bold !important;
+}
+
+.infection {
+  background-color: #7ed5f4 !important;
+  color: whitesmoke !important;
+}
+
+.lab {
+  background-color: #3b4e1d !important;
+  color: whitesmoke !important;
+  font-weight: bold !important;
+}
+
+.casemgt {
+  background-color: #32588b !important;
+  color: whitesmoke !important;
+  font-weight: bold !important;
+}
+
+.societal {
+  background-color: #b24188 !important;
+  color: whitesmoke !important;
+}
+
+@media (max-width: 770px) {
+  .card {
+    margin: 2% 0 !important;
+  }
+
+  .container {
+    margin: 1rem;
+  }
+}

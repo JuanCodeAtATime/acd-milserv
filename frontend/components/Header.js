@@ -63,13 +63,13 @@ const Header = (props) => {
               <NavItem className="listItems">ABOUT</NavItem>
             </Link>
             <Link href="/blogs">
+              <NavItem className="listItems">VETERANS & JOBS</NavItem>
+            </Link>
+            <Link href="/blogs">
               <NavItem className="listItems">RETAILERS</NavItem>
             </Link>
             <Link href="/blogs">
               <NavItem className="listItems">DISTRIBUTORS</NavItem>
-            </Link>
-            <Link href="/blogs">
-              <NavItem className="listItems">VETERAN JOBS</NavItem>
             </Link>
 
             <Link href="/blogs">

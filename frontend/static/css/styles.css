@@ -1,14 +1,23 @@
+body {
+  overflow-x: hidden;
+}
 #logo {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   cursor: pointer;
   font-size: 1.5rem;
 }
 
-.landing-cta {
+h1.landing-cta {
   color: whitesmoke;
   font-weight: 700;
-  font-weight: 1.75rem;
-  text-shadow: 1px 1px 2px #383838;
+  font-weight: 3rem;
+  text-shadow: 1.5px 1.5px 2px #383838;
+}
+
+#landing-cta {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 3rem;
 }
 
 .headers {
@@ -53,10 +62,11 @@
 }
 
 .landingSectionTwo {
-  height: 800px;
+  height: auto;
   width: 100%;
   margin: 0;
-  background-color: rgba(91, 192, 222, 0.75) !important;
+  padding-bottom: 80px;
+  background-color: whitesmoke !important;
 }
 
 .program-your-career {
@@ -76,7 +86,7 @@
 .learnMoreBtn {
   background-color: rgba(128, 0, 128, 0.75) !important;
   color: whitesmoke !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500 !important;
   transition: all 0.2s ease-in-out;
   margin-bottom: 1rem;
@@ -170,4 +180,88 @@ span.navbar-toggler-icon {
 
 .ql-editor {
   min-height: 300px;
+}
+
+/* Landing Cards styles */
+.cardTitle {
+  color: purple;
+  font-weight: bolder;
+}
+
+.card {
+  margin: 0.5rem 0.5rem !important;
+  font-weight: bold !important;
+  height: 285px !important;
+  /* min-height: 165.9px !important; */
+  min-width: 285px !important;
+  /* min-width: 165.9px !important; */
+  color: #ffffff !important;
+  border-radius: 1px !important;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out !important;
+  opacity: 0.75;
+}
+
+.card:hover {
+  transform: scale(1.03) !important;
+  opacity: 1;
+}
+
+.icons {
+  font-size: 6rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.categoryTitle {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.11 !important;
+  letter-spacing: normal !important;
+  color: #ffffff !important;
+}
+
+#veterans-color {
+  background-color: purple;
+}
+#retailers-color {
+  background-color: darkred;
+}
+
+#distributors-color {
+  background-color: goldenrod;
+}
+
+/* 
+Footer styles */
+
+.footer-wrapper {
+  border-top: solid 1px #c4c4c4 !important;
+  position: relative !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  background-color: purple;
+}
+
+.footer-container {
+  /* margin: 1rem 1rem !important; */
+  color: whitesmoke;
+}
+
+a.footer-links:visited,
+a.footer-links:hover,
+a.footer-links:link {
+  color: whitesmoke !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  font-size: 14px;
 }

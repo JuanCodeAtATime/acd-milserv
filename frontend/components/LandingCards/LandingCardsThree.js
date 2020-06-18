@@ -1,12 +1,15 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTruck } from "@fortawesome/free-solid-svg-icons";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Grid,
+} from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -14,37 +17,28 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LandingCardsThree() {
+export default function LandingCardsOne() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Learn
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Don't know where to begin? Connect today to gain the courage,
-            confidence, and comittment to launch your coding career.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
+    // <Link to="/" style={{ textDecoration: "none" }}>
+    <Grid
+      item
+      component={Card}
+      xs={12}
+      s={6}
+      md={3}
+      className="card"
+      id="distributors-color"
+    >
+      <CardContent>
+        <CardMedia title="Paella dish">
+          <FontAwesomeIcon className="icons" icon={faTruck} />
+        </CardMedia>
+
+        <Typography className="categoryTitle">DISTRIBUTORS</Typography>
+      </CardContent>
+    </Grid>
+    // </Link>
   );
 }
