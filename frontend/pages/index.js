@@ -24,7 +24,7 @@ const Index = () => {
       <section className="landingSectionTwo text-center">
         <div className="row program-your-career pt-3 pb-4">
           <h2 className="program">
-            <b style={{ color: "purple" }}>OUR MISSION</b>
+            <b style={{ color: "#4F517D" }}>OUR MISSION</b>
           </h2>
         </div>
         <div className="row program-your-career pl-3 pr-3">

@@ -35,7 +35,7 @@ h1.landing-cta {
 }
 
 .navBarLogo {
-  color: purple !important;
+  color: #8d54b5 !important;
   font-weight: 700;
   font-size: 2rem;
   position: relative;
@@ -84,7 +84,7 @@ h1.landing-cta {
 }
 
 .learnMoreBtn {
-  background-color: rgba(128, 0, 128, 0.75) !important;
+  background-color: rgba(55.3%, 32.9%, 71%, 0.85) !important;
   color: whitesmoke !important;
   font-size: 1.3rem;
   font-weight: 500 !important;
@@ -126,7 +126,7 @@ a:hover {
 
 .navbar {
   background-color: white !important;
-  color: purple !important;
+  color: #8d54b5 !important;
 }
 /* 
 Media queries needed to prevent buttons from elongating in collapsible menu */
@@ -151,7 +151,7 @@ Media queries needed to prevent buttons from elongating in collapsible menu */
 
 /* Menu items in collapsible menu */
 .listItems {
-  color: purple !important;
+  color: #8d54b5 !important;
   font-weight: 600;
   margin: 0.75rem;
   cursor: pointer;
@@ -184,7 +184,7 @@ span.navbar-toggler-icon {
 
 /* Landing Cards styles */
 .cardTitle {
-  color: purple;
+  color: #8d54b5;
   font-weight: bolder;
 }
 
@@ -226,7 +226,7 @@ span.navbar-toggler-icon {
 }
 
 #veterans-color {
-  background-color: purple;
+  background-color: #8d54b5;
 }
 #retailers-color {
   background-color: darkred;
@@ -245,7 +245,7 @@ Footer styles */
   left: 0 !important;
   bottom: 0 !important;
   right: 0 !important;
-  background-color: purple;
+  background-color: #8d54b5;
 }
 
 .footer-container {
