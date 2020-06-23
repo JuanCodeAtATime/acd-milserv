@@ -59,21 +59,27 @@ const Header = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="navtoggler">
           <Nav className="ml-auto" navbar>
-            <Link href="/blogs">
-              <NavItem className="listItems">ABOUT</NavItem>
-            </Link>
-            <Link href="/blogs">
-              <NavItem className="listItems">VETERANS & JOBS</NavItem>
-            </Link>
-            <Link href="/blogs">
-              <NavItem className="listItems">RETAILERS</NavItem>
-            </Link>
-            <Link href="/blogs">
-              <NavItem className="listItems">DISTRIBUTORS</NavItem>
-            </Link>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret className="listItems">
+                PARTNERS
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>Makers</DropdownItem>
+                <DropdownItem>Retailers</DropdownItem>
+                <DropdownItem>Distributors</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>Partner with us</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
 
             <Link href="/blogs">
+              <NavItem className="listItems">VETERANS</NavItem>
+            </Link>
+            <Link href="/blogs">
               <NavItem className="listItems">CONTACT</NavItem>
+            </Link>
+            <Link href="/blogs">
+              <NavItem className="listItems">ABOUT</NavItem>
             </Link>
 
             {/* {!isAuth() && (

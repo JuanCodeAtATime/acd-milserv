@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFlagUsa } from "@fortawesome/free-solid-svg-icons";
+import { faBeer } from "@fortawesome/free-solid-svg-icons";
 import {
   Card,
   CardContent,
@@ -29,14 +29,14 @@ export default function LandingCardsOne() {
       s={6}
       md={3}
       className="card"
-      id="veterans-color"
+      id="makers-color"
     >
       <CardContent>
-        <CardMedia title="Paella dish">
-          <FontAwesomeIcon icon={faFlagUsa} className="icons" />
+        <CardMedia title="Beer Makers">
+          <FontAwesomeIcon icon={faBeer} className="icons" />
         </CardMedia>
 
-        <Typography className="categoryTitle">VETERANS</Typography>
+        <Typography className="categoryTitle">MAKERS</Typography>
       </CardContent>
     </Grid>
     // </Link>

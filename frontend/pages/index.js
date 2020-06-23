@@ -6,6 +6,7 @@ import { faTruck } from "@fortawesome/free-solid-svg-icons";
 import LandingCardsOne from "../components/LandingCards/LandingCardsOne";
 import LandingCardsTwo from "../components/LandingCards/LandingCardsTwo";
 import LandingCardsThree from "../components/LandingCards/LandingCardsThree";
+import LandingCardsFour from "../components/LandingCards/LandingCardsFour";
 
 const Index = () => {
   return (
@@ -24,7 +25,7 @@ const Index = () => {
       <section className="landingSectionTwo text-center">
         <div className="row program-your-career pt-3 pb-4">
           <h2 className="program">
-            <b style={{ color: "#4F517D" }}>OUR MISSION</b>
+            <b style={{ color: "#8d54b5" }}>OUR PARTNERS</b>
           </h2>
         </div>
         <div className="row program-your-career pl-3 pr-3">
@@ -36,6 +37,9 @@ const Index = () => {
           </div>
           <div className="col-md-3 mb-2 col-right">
             <LandingCardsThree />
+          </div>
+          <div className="col-md-3 mb-2 col-right">
+            <LandingCardsFour />
           </div>
         </div>
       </section>

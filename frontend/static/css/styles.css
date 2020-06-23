@@ -8,10 +8,10 @@ body {
 }
 
 h1.landing-cta {
-  color: whitesmoke;
+  color: white;
   font-weight: 700;
   font-weight: 3rem;
-  text-shadow: 1.5px 1.5px 2px #383838;
+  text-shadow: 1.85px 1.85px 2px darkred;
 }
 
 #landing-cta {
@@ -77,6 +77,9 @@ h1.landing-cta {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.65);
+  margin-top: 3rem;
+  padding: 0.25rem 2rem;
 }
 
 .learnMore:hover {
@@ -84,12 +87,13 @@ h1.landing-cta {
 }
 
 .learnMoreBtn {
-  background-color: rgba(55.3%, 32.9%, 71%, 0.85) !important;
+  background-color: rgba(141, 84, 181, 0.85) !important;
   color: whitesmoke !important;
   font-size: 1.3rem;
   font-weight: 500 !important;
   transition: all 0.2s ease-in-out;
   margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
 .learnMoreBtn:hover {
@@ -102,7 +106,6 @@ h1.landing-cta {
 }
 
 .dropdown-toggle {
-  margin-top: 2px !important;
   margin-right: 0 !important;
   padding-right: 0 !important;
 }
@@ -167,8 +170,21 @@ Media queries needed to prevent buttons from elongating in collapsible menu */
 }
 
 .dropdown-menu {
-  background-color: #5bc0de !important;
+  background-color: #8d54b5 !important;
   color: whitesmoke !important;
+}
+
+.dropdown-toggle {
+  padding: 0 !important;
+}
+
+button.dropdown-item {
+  color: #ffffff !important;
+}
+
+button.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  text-decoration: none;
 }
 
 span.navbar-toggler-icon {
@@ -234,6 +250,10 @@ span.navbar-toggler-icon {
 
 #distributors-color {
   background-color: goldenrod;
+}
+
+#makers-color {
+  background-color: #228b22;
 }
 
 /* 

@@ -6,17 +6,23 @@ const Footer = () => {
       <footer color="blue" className="font-small pt-4 mt-4">
         <div className="footer-container">
           <div className="row text-center">
-            <div className="col-md-4 pb-2">
-              <h6 className="title">Contact US</h6>
-              <p>info@acdmilserve.com</p>
+            <div className="col-md-3 pb-2">
+              <h3 className="title">MILSERV</h3>
+              <p>
+                Copyright <span>&copy;</span> MILSERV 2020{" "}
+              </p>
             </div>
-            <div className="col-md-4 pb-2">
+            <div className="col-md-3 pb-2">
               <h6 className="title">Our Mission</h6>
               <p>Veterans & Jobs</p>
               <p>Retailers</p>
               <p>Distributors</p>
             </div>
-            <div className="col-md-4 pb-2">
+            <div className="col-md-3 pb-2">
+              <h6 className="title">Follow Us</h6>
+              <p>Twitter Account</p>
+            </div>
+            <div className="col-md-3 pb-2">
               <h6 className="title">Follow Us</h6>
               <p>Twitter Account</p>
             </div>
