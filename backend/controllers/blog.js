@@ -60,7 +60,7 @@ exports.create = (req, res) => {
     let arrayOfTags = tags && tags.split(",");
 
     if (files.photo) {
-      if (files.photo.size > 20000000) {
+      if (files.photo.size > 1000000) {
         return res.status(400).json({
           error: "Image should be less then 1mb in size",
         });

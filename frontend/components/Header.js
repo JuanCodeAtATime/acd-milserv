@@ -87,17 +87,19 @@ const Header = (props) => {
                 NEWS
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>BLOG</DropdownItem>
+                <Link href="/blogs">
+                  <DropdownItem>BLOG</DropdownItem>
+                </Link>
                 <DropdownItem>PRESS RELEASES</DropdownItem>
                 <DropdownItem>STAY CONNECTED</DropdownItem>
                 {/* <DropdownItem divider />
                 <DropdownItem>Partner with us</DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
-            <Link href="/blogs">
+            <Link href="#">
               <NavItem className="listItems">CONTACT</NavItem>
             </Link>
-            <Link href="/blogs">
+            <Link href="#">
               <NavItem className="listItems">ABOUT</NavItem>
             </Link>
 
