@@ -39,19 +39,20 @@ h1.landing-cta {
   font-weight: 700;
   font-size: 2rem;
   position: relative;
+  margin-right: 0;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
 
 .bottom-logo-text {
-  font-size: 0.5rem;
+  font-size: 0.43rem;
   font-family: Arial, Helvetica, sans-serif;
   color: red !important;
   position: absolute;
   bottom: 0;
   float: left;
   left: 0;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 .listItems:hover,
@@ -194,6 +195,10 @@ span.navbar-toggler-icon {
   border-radius: 5px;
 }
 
+.dropdowns-arrows {
+  margin-right: 5px !important;
+}
+
 .ql-editor {
   min-height: 300px;
 }
@@ -284,4 +289,19 @@ a.footer-links:link {
   line-height: 2;
   letter-spacing: normal;
   font-size: 14px;
+}
+
+/* Footer */
+.footer-items {
+  line-height: 0.85;
+  cursor: pointer;
+}
+
+.footer-items:hover {
+  color: #383838;
+  font-weight: 400;
+}
+
+h6.title {
+  font-weight: 700;
 }

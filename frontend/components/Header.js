@@ -44,8 +44,8 @@ const Header = (props) => {
             <NavbarBrand className="navBarLogo">
               <img
                 src="../static/images/owllogo.jpg"
-                width="35px"
-                height="50px"
+                width="45px"
+                height="40px"
                 alt="React Bootstrap logo"
               />
               MILSERV
@@ -60,21 +60,40 @@ const Header = (props) => {
         <Collapse isOpen={isOpen} navbar className="navtoggler">
           <Nav className="ml-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret className="listItems">
+              <DropdownToggle nav caret className="listItems dropdowns-arrows">
                 PARTNERS
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Makers</DropdownItem>
-                <DropdownItem>Retailers</DropdownItem>
-                <DropdownItem>Distributors</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Partner with us</DropdownItem>
+                <DropdownItem>MAKERS</DropdownItem>
+                <DropdownItem>RETAILERS</DropdownItem>
+                <DropdownItem>DISTRIBUTORS</DropdownItem>
+                {/* <DropdownItem divider />
+                <DropdownItem>Partner with us</DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
 
-            <Link href="/blogs">
-              <NavItem className="listItems">VETERANS</NavItem>
-            </Link>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret className="listItems dropdowns-arrows">
+                VETERANS
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>JOBS</DropdownItem>
+                <DropdownItem>SKILLBRIDGE</DropdownItem>
+                <DropdownItem>GIVING BACK</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret className="listItems dropdowns-arrows">
+                NEWS
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>BLOG</DropdownItem>
+                <DropdownItem>PRESS RELEASES</DropdownItem>
+                <DropdownItem>STAY CONNECTED</DropdownItem>
+                {/* <DropdownItem divider />
+                <DropdownItem>Partner with us</DropdownItem> */}
+              </DropdownMenu>
+            </UncontrolledDropdown>
             <Link href="/blogs">
               <NavItem className="listItems">CONTACT</NavItem>
             </Link>

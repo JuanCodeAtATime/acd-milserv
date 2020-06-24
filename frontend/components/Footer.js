@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <footer color="blue" className="font-small pt-4 mt-4">
+      <footer color="blue" className="font-small pt-4 mt-4 pb-4">
         <div className="footer-container">
           <div className="row text-center">
             <div className="col-md-3 pb-2">
@@ -13,18 +13,22 @@ const Footer = () => {
               </p>
             </div>
             <div className="col-md-3 pb-2">
-              <h6 className="title">Our Mission</h6>
-              <p>Veterans & Jobs</p>
-              <p>Retailers</p>
-              <p>Distributors</p>
+              <h6 className="title">PARTNERS</h6>
+              <p className="footer-items">MAKERS</p>
+              <p className="footer-items">RETAILERS</p>
+              <p className="footer-items">DISTRIBUTORS</p>
             </div>
             <div className="col-md-3 pb-2">
-              <h6 className="title">Follow Us</h6>
-              <p>Twitter Account</p>
+              <h6 className="title">VETERANS</h6>
+              <p className="footer-items">JOBS</p>
+              <p className="footer-items">SKILLBRIDGE</p>
+              <p className="footer-items">GIVING BACK</p>
             </div>
             <div className="col-md-3 pb-2">
-              <h6 className="title">Follow Us</h6>
-              <p>Twitter Account</p>
+              <h6 className="title">NEWS</h6>
+              <p className="footer-items">BLOG</p>
+              <p className="footer-items">PRESS RELEASES</p>
+              <p className="footer-items">STAY CONNECTED</p>
             </div>
           </div>
         </div>
