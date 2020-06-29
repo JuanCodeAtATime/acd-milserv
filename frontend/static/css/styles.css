@@ -134,13 +134,13 @@ a:hover {
 }
 /* 
 Media queries needed to prevent buttons from elongating in collapsible menu */
-/* .authBtns {
-  background-color: #383838;
+.authBtns {
+  background-color: #8d54b5 !important ;
   border-radius: 5px;
   margin: 2px;
   display: inline-block;
   padding: auto 1px;
-} */
+}
 
 /* .authBtns {
   background-color: #5bc0de !important;
@@ -304,4 +304,18 @@ a.footer-links:link {
 
 h6.title {
   font-weight: 700;
+}
+
+/* Sign in and Register pages  */
+
+.auth-box {
+  width: 350px;
+  height: 350px;
+  padding: 1rem;
+  margin: 7rem 0.5rem 2rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.signinPage {
+  background-image: url("../images/landing-image.jpg");
 }

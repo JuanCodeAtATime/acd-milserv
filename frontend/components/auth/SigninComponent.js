@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { signin, authenticate, isAuth } from "../../actions/auth";
 import Router from "next/router";
+import Link from "next/link";
 
 const SigninComponent = () => {
   const [values, setValues] = useState({
@@ -55,31 +56,42 @@ const SigninComponent = () => {
 
   const signinForm = () => {
     return (
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <input
-            value={email}
-            onChange={handleChange("email")}
-            type="email"
-            className="form-control"
-            placeholder="Type your email"
-          />
-        </div>
+      <div className="auth-box">
+        <h3 style={{ color: "#8d54b5" }}>STAFF PORTAL</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <input
+              value={email}
+              onChange={handleChange("email")}
+              type="email"
+              className="form-control"
+              placeholder="Type your email"
+            />
+          </div>
 
-        <div className="form-group">
-          <input
-            value={password}
-            onChange={handleChange("password")}
-            type="password"
-            className="form-control"
-            placeholder="Type your password"
-          />
-        </div>
+          <div className="form-group">
+            <input
+              value={password}
+              onChange={handleChange("password")}
+              type="password"
+              className="form-control"
+              placeholder="Type your password"
+            />
+          </div>
 
-        <div>
-          <button className="btn btn-info authBtns">Sign-in</button>
-        </div>
-      </form>
+          <div>
+            <button
+              className="btn btn-info authBtns"
+              style={{ backgroundColor: "#8d54b5" }}
+            >
+              Sign-in
+            </button>
+          </div>
+          <span style={{ fontSize: ".75rem" }}>
+            {!isAuth() && <Link href="/signup">or Create Account</Link>}
+          </span>
+        </form>
+      </div>
     );
   };
 

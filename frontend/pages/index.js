@@ -43,7 +43,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </Layout>
   );
 };

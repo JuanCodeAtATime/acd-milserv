@@ -56,41 +56,44 @@ const SignupComponent = () => {
 
   const signupForm = () => {
     return (
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <input
-            value={name}
-            onChange={handleChange("name")}
-            type="text"
-            className="form-control"
-            placeholder="Enter name"
-          />
-        </div>
+      <div className="auth-box">
+        <h3 style={{ color: "#8d54b5" }}>STAFF PORTAL</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <input
+              value={name}
+              onChange={handleChange("name")}
+              type="text"
+              className="form-control"
+              placeholder="Enter name"
+            />
+          </div>
 
-        <div className="form-group">
-          <input
-            value={email}
-            onChange={handleChange("email")}
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-          />
-        </div>
+          <div className="form-group">
+            <input
+              value={email}
+              onChange={handleChange("email")}
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+            />
+          </div>
 
-        <div className="form-group">
-          <input
-            value={password}
-            onChange={handleChange("password")}
-            type="password"
-            className="form-control"
-            placeholder="Create password"
-          />
-        </div>
+          <div className="form-group">
+            <input
+              value={password}
+              onChange={handleChange("password")}
+              type="password"
+              className="form-control"
+              placeholder="Create password"
+            />
+          </div>
 
-        <div>
-          <button className="btn btn-info authBtns">Sign-up</button>
-        </div>
-      </form>
+          <div>
+            <button className="btn btn-info authBtns">Sign-up</button>
+          </div>
+        </form>
+      </div>
     );
   };
 

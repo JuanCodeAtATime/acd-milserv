@@ -67,8 +67,12 @@ const Header = (props) => {
                 <DropdownItem>MAKERS</DropdownItem>
                 <DropdownItem>RETAILERS</DropdownItem>
                 <DropdownItem>DISTRIBUTORS</DropdownItem>
-                {/* <DropdownItem divider />
-                <DropdownItem>Partner with us</DropdownItem> */}
+                <DropdownItem divider />
+                {!isAuth() && (
+                  <Link href="/signin">
+                    <DropdownItem>Staff Portal</DropdownItem>
+                  </Link>
+                )}
               </DropdownMenu>
             </UncontrolledDropdown>
 
@@ -138,7 +142,7 @@ const Header = (props) => {
                   </Link>
                 </NavItem>
               </React.Fragment>
-            )}
+            )} */}
 
             {isAuth() && isAuth().role === 0 && (
               <NavItem>
@@ -154,7 +158,7 @@ const Header = (props) => {
             {isAuth() && isAuth().role === 1 && (
               <NavItem>
                 <Link href="/admin">
-                  <NavLink className="navItems">
+                  <NavLink className="listItems">
                     <FontAwesomeIcon icon={faLaptopCode} />{" "}
                     {`${isAuth().name}'s Dashboard`}
                   </NavLink>
@@ -165,13 +169,13 @@ const Header = (props) => {
             {isAuth() && (
               <NavItem>
                 <NavLink
-                  className="navItems"
+                  className="listItems"
                   onClick={() => signout(() => Router.replace("/signin"))}
                 >
                   <FontAwesomeIcon icon={faDoorOpen} /> Signout
                 </NavLink>
               </NavItem>
-            )} */}
+            )}
           </Nav>
           {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
