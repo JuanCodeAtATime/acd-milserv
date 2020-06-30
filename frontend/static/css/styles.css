@@ -7,7 +7,15 @@ body {
   font-size: 1.5rem;
 }
 
-h1.landing-cta {
+footer {
+  position: relative !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+h1.landing-cta,
+h2.about-header {
   color: white;
   font-weight: 700;
   font-weight: 3rem;
@@ -32,6 +40,41 @@ h1.landing-cta {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+/* About Page */
+.aboutPage {
+  height: 650px;
+  width: 100%;
+  background-image: url("../images/landing-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.aboutSections {
+  min-height: 300px;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+}
+
+.about-where-btn {
+  border: solid white 1px;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.about-header {
+  text-align: center !important;
+  justify-content: center !important;
+  display: inline;
+  align-items: center !important;
+}
+
+.about-sections {
+  position: relative !important;
 }
 
 .navBarLogo {
@@ -318,4 +361,8 @@ h6.title {
 
 .signinPage {
   background-image: url("../images/landing-image.jpg");
+}
+
+.nprogress-busy {
+  color: #8d54b5 !important;
 }

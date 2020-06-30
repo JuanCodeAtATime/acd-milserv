@@ -5,12 +5,7 @@ import { signout, isAuth } from "../actions/auth";
 import Router from "next/router";
 import NProgress from "nprogress";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDoorOpen,
-  faList,
-  faLaptopCode,
-  faCodeBranch,
-} from "@fortawesome/free-solid-svg-icons";
+import { faDoorOpen, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import {
   Collapse,
   Navbar,
@@ -23,7 +18,6 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
 } from "reactstrap";
 
 import ".././node_modules/nprogress/nprogress.css";
@@ -103,7 +97,7 @@ const Header = (props) => {
             <Link href="#">
               <NavItem className="listItems">CONTACT</NavItem>
             </Link>
-            <Link href="#">
+            <Link href="/about">
               <NavItem className="listItems">ABOUT</NavItem>
             </Link>
 
@@ -147,7 +141,7 @@ const Header = (props) => {
             {isAuth() && isAuth().role === 0 && (
               <NavItem>
                 <Link href="/user">
-                  <NavLink className="navItems">
+                  <NavLink className="listItems">
                     {" "}
                     {`${isAuth().name}'s Dashboard`}
                   </NavLink>

@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import Footer from "../components/Footer";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTruck } from "@fortawesome/free-solid-svg-icons";
@@ -43,7 +42,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* <Footer /> */}
     </Layout>
   );
 };
