@@ -55,7 +55,10 @@ h2.about-header {
   min-height: 300px;
   color: #ffffff;
   margin: 0;
-  padding: 20px;
+  padding-left: 45px;
+  padding-right: 35px;
+  padding-top: 15px;
+  padding-bottom: 20px;
 }
 
 .about-where-btn {
@@ -73,9 +76,7 @@ h2.about-header {
   align-items: center !important;
 }
 
-.about-sections {
-  position: relative !important;
-}
+/* End About page */
 
 .navBarLogo {
   color: #8d54b5 !important;
@@ -109,7 +110,14 @@ h2.about-header {
   height: auto;
   width: 100%;
   margin: 0;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+  background-color: whitesmoke !important;
+}
+
+.aboutSectionTwo {
+  height: auto;
+  width: 100%;
+  margin: 0;
   background-color: whitesmoke !important;
 }
 

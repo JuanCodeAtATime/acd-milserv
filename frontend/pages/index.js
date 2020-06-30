@@ -42,6 +42,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      {/* <section style={{ height: "650px" }}>For blog section</section> */}
     </Layout>
   );
 };

@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
@@ -6,7 +6,7 @@ import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
 const About = () => {
   return (
     <Layout>
-      <section className="aboutPage ml-0 pl-0 pb-3 mb-4">
+      <section className="aboutPage ml-0 pl-0">
         <div className="row">
           <div className="col-md-3">
             <a href="/">
@@ -20,7 +20,7 @@ const About = () => {
                 <span>
                   <FontAwesomeIcon icon={faArrowAltCircleLeft} />
                 </span>{" "}
-                Back
+                Back Home
               </p>
             </a>
           </div>
@@ -36,9 +36,9 @@ const About = () => {
             </h2>
           </div>
         </div>
-
-        {/* </section>
-      <section className="landingSectionTwo ml-0"> */}
+      </section>
+      <section className="aboutSectionTwo ml-0">
+        {" "}
         <div className="row text-center">
           <div
             className="col-md-6 aboutSections"
@@ -73,7 +73,7 @@ const About = () => {
           </div>
           <div
             className="col-md-6 aboutSections"
-            style={{ backgroundColor: "#228b22" }}
+            style={{ backgroundColor: "#b19cd9" }}
           >
             <h3>WHY?</h3>
             <p>
@@ -104,8 +104,8 @@ const About = () => {
           <div
             className="col-md-12 aboutSections"
             style={{
-              backgroundColor: "#b19cd9",
-              padding: "40px",
+              backgroundColor: "#228b22",
+              paddingBottom: "2rem",
             }}
           >
             <h3>HOW?</h3>

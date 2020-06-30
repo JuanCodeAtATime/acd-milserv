@@ -94,7 +94,7 @@ const Header = (props) => {
                 <DropdownItem>Partner with us</DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
-            <Link href="#">
+            <Link href="/contact">
               <NavItem className="listItems">CONTACT</NavItem>
             </Link>
             <Link href="/about">
