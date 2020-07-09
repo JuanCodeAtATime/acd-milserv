@@ -1,4 +1,7 @@
 import React from "react";
+import { isAuth } from "../actions/auth";
+import Link from "next/link";
+// import { NavItem } from "reactstrap";
 
 const Footer = () => {
   return (
@@ -11,6 +14,11 @@ const Footer = () => {
               <p>
                 Copyright <span>&copy;</span> MILSERV 2020{" "}
               </p>
+              {!isAuth() && (
+                <Link href="/signin">
+                  <p className="footer-items staff-signin">Staff Portal</p>
+                </Link>
+              )}
             </div>
             <div className="col-md-3 pb-2">
               <h6 className="title">PARTNERS</h6>

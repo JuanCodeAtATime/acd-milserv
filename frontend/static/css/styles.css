@@ -86,6 +86,7 @@ h2.about-header {
   margin-right: 0;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+  cursor: pointer;
 }
 
 .bottom-logo-text {
@@ -177,6 +178,17 @@ a:hover {
 /* Muted text labels in manage categories and tags page */
 .catsTags {
   font-size: 1.2rem;
+}
+/* Buttons color on category-tag.js file */
+.catBtns {
+  color: white !important;
+  background-color: #8d54b5 !important;
+  outline: none !important;
+}
+
+.catBtns:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .navbar {
@@ -351,6 +363,11 @@ a.footer-links:link {
 .footer-items:hover {
   color: #383838;
   font-weight: 400;
+}
+
+p.staff-signin {
+  font-size: 0.85rem;
+  color: blue;
 }
 
 h6.title {

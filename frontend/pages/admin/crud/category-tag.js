@@ -8,7 +8,7 @@ const CategoryTag = () => {
   return (
     <Layout>
       <Admin>
-        <div className="container-fluid pl-4">
+        <div className="container-fluid pl-4" style={{ minHeight: "420Px" }}>
           <div className="row">
             <div className="col-md-12 pt-5 pb-5">
               <h2 className="headers">Manage Categories and Tags</h2>

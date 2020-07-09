@@ -134,7 +134,7 @@ const Tag = () => {
         />
       </div>
       <div>
-        <button type="submit" className="btn btn-info">
+        <button type="submit" className="btn btn-info catBtns">
           Create
         </button>
       </div>

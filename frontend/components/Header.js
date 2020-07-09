@@ -62,11 +62,12 @@ const Header = (props) => {
                 <DropdownItem>RETAILERS</DropdownItem>
                 <DropdownItem>DISTRIBUTORS</DropdownItem>
                 <DropdownItem divider />
-                {!isAuth() && (
+                {/* {!isAuth() && (
                   <Link href="/signin">
                     <DropdownItem>Staff Portal</DropdownItem>
                   </Link>
-                )}
+                )} */}
+                <DropdownItem>PARTNER WITH US</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
 
