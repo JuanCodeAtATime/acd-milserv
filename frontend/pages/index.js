@@ -6,6 +6,7 @@ import LandingCardsOne from "../components/LandingCards/LandingCardsOne";
 import LandingCardsTwo from "../components/LandingCards/LandingCardsTwo";
 import LandingCardsThree from "../components/LandingCards/LandingCardsThree";
 import LandingCardsFour from "../components/LandingCards/LandingCardsFour";
+import Blogs from "./blogs";
 
 const Index = () => {
   return (
@@ -42,7 +43,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* <section style={{ height: "650px" }}>For blog section</section> */}
+      {/* <section style={{ height: "650px" }}>
+        <Blogs />
+      </section> */}
     </Layout>
   );
 };

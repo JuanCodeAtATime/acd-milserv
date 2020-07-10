@@ -144,7 +144,7 @@ const Header = (props) => {
                 <Link href="/user">
                   <NavLink className="listItems">
                     {" "}
-                    {`${isAuth().name}'s Dashboard`}
+                    {`${isAuth().name}'s Portal`}
                   </NavLink>
                 </Link>
               </NavItem>
@@ -155,7 +155,7 @@ const Header = (props) => {
                 <Link href="/admin">
                   <NavLink className="listItems">
                     <FontAwesomeIcon icon={faLaptopCode} />{" "}
-                    {`${isAuth().name}'s Dashboard`}
+                    {`${isAuth().name}'s Portal`}
                   </NavLink>
                 </Link>
               </NavItem>

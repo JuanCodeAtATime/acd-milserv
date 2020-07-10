@@ -51,6 +51,16 @@ h2.about-header {
   background-attachment: fixed;
 }
 
+.staffPage {
+  min-height: 650px;
+  width: 100%;
+  background-image: url("../images/distributors.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 3rem !important;
+}
+
 .aboutSections {
   min-height: 300px;
   color: #ffffff;
@@ -195,6 +205,7 @@ a:hover {
   background-color: white !important;
   color: #8d54b5 !important;
 }
+
 /* 
 Media queries needed to prevent buttons from elongating in collapsible menu */
 .authBtns {
@@ -356,8 +367,10 @@ span.navbar-toggler-icon {
   transform: scale(1.03) !important;
 }
 .staff-portal-row {
-  min-height: 200px !important;
-  margin-bottom: 4rem;
+  margin-bottom: 80px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 20px;
+  display: flex;
 }
 
 /* 

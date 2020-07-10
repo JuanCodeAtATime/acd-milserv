@@ -74,29 +74,29 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
   return (
     <React.Fragment>
       {head()}
-      <Layout>
-        <main>
-          <div className="container-fluid">
-            <header>
-              <div className="col-md-12 pt-3">
-                <h1 className="display-4 text-center headers">Explore Blogs</h1>
-              </div>
-              <section>
-                <div className="pb-5 text-center">
-                  {showAllCategories()}
-                  {showAllTags()}
-                  <hr />
-                </div>
-              </section>
-            </header>
-          </div>
-          <div className="container-fluid">
-            <div className="row pl-3">
-              <div className="col-md-12">{showAllBlogs()}</div>
+      {/* <Layout> */}
+      <main>
+        <div className="container-fluid mt-4 pt-4">
+          <header>
+            <div className="col-md-12 pt-3 mt-4">
+              <h3 className="display-4 text-center">MILSERV NEWS</h3>
             </div>
+            <section>
+              <div className="pb-5 text-center">
+                {showAllCategories()}
+                {showAllTags()}
+                <hr />
+              </div>
+            </section>
+          </header>
+        </div>
+        <div className="container-fluid">
+          <div className="row pl-3">
+            <div className="col-md-12">{showAllBlogs()}</div>
           </div>
-        </main>
-      </Layout>
+        </div>
+      </main>
+      {/* </Layout> */}
     </React.Fragment>
   );
 };
