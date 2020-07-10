@@ -287,7 +287,8 @@ span.navbar-toggler-icon {
   opacity: 0.75;
 }
 
-.card:hover {
+.card:hover,
+.staff-card:hover {
   transform: scale(1.03) !important;
   opacity: 1;
 }
@@ -322,6 +323,41 @@ span.navbar-toggler-icon {
 
 #makers-color {
   background-color: #228b22;
+}
+
+/* Properties for Staff-Portal Page and Buttons */
+
+.staff-portal-bg-image {
+  background-image: url("../images/distributors.jpeg");
+  background-size: cover;
+  min-height: 400px;
+}
+
+#staff-btn-manage {
+  background-color: #228b22;
+}
+
+#write-btn {
+  background-color: darkred;
+}
+
+#create-btn {
+  background-color: #8d54b5;
+}
+
+.staff-btns {
+  color: #ffffff;
+  height: 50px;
+  width: 250px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out !important;
+}
+.staff-btns:hover {
+  transform: scale(1.03) !important;
+}
+.staff-portal-row {
+  min-height: 200px !important;
+  margin-bottom: 4rem;
 }
 
 /* 

@@ -1,4 +1,4 @@
-import Layout from "../../../components/Layout";
+import Layout from "../../../components/Layout.js";
 import Admin from "../../../components/auth/Admin";
 import BlogCreate from "../../../components/crud/BlogCreate";
 import Link from "next/link";
