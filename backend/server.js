@@ -13,7 +13,7 @@ const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const categoryRoutes = require("./routes/category");
 const tagRoutes = require("./routes/tag");
-const veteranRoutes = require("./routes/veterans");
+const veteranRoutes = require("./routes/veteran");
 
 //app
 const app = express();
