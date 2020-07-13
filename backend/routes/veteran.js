@@ -3,9 +3,9 @@ const router = express.Router();
 const {
   create,
   list,
-  read,
-  remove,
-  update,
+  // read,
+  // remove,
+  // update,
 } = require("../controllers/veteran");
 const { requireSignin, adminMiddleware } = require("../controllers/auth");
 
@@ -17,9 +17,9 @@ router.post("/veteran", create);
 router.get("/veterans", list, requireSignin, adminMiddleware);
 
 // This route selects individual Veteran file
-router.get("/veteran_file", read);
+// router.get("/veteran_file", read);
 
-router.delete("/veteran_file", requireSignin, adminMiddleware, remove);
-router.put("/veteran_file", requireSignin, adminMiddleware, update);
+// router.delete("/veteran_file", requireSignin, adminMiddleware, remove);
+// router.put("/veteran_file", requireSignin, adminMiddleware, update);
 
 module.exports = router;

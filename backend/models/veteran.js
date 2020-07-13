@@ -20,9 +20,18 @@ const veteranSchema = new mongoose.Schema({
     unique: true,
     lowercase: true,
   },
-  year: {
+  milAffiliation: {
     type: Number,
     default: 0,
+  },
+  careerInterest: {
+    type: Number,
+    default: 0,
+  },
+  additionalInfo: {
+    type: {},
+    required: false,
+    max: 2000000,
   },
   date: { type: Date, default: Date.now },
 });
