@@ -76,7 +76,10 @@ const Header = (props) => {
                 VETERANS
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>JOBS</DropdownItem>
+                <Link href="/veteran-jobs">
+                  <DropdownItem>JOBS</DropdownItem>
+                </Link>
+
                 <DropdownItem>SKILLBRIDGE</DropdownItem>
                 <DropdownItem>GIVING BACK</DropdownItem>
               </DropdownMenu>

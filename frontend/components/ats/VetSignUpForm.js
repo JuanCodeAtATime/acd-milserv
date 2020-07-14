@@ -1,327 +1,124 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Form, Field } from "react-final-form";
-import { TextField, Checkbox, Radio, Select } from "final-form-material-ui";
-import {
-  Typography,
-  Paper,
-  Link,
-  Grid,
-  Button,
-  CssBaseline,
-  RadioGroup,
-  FormLabel,
-  MenuItem,
-  FormGroup,
-  FormControl,
-  FormControlLabel,
-} from "@material-ui/core";
-// Picker
-import DateFnsUtils from "@date-io/date-fns";
-import {
-  MuiPickersUtilsProvider,
-  TimePicker,
-  DatePicker,
-} from "@material-ui/pickers";
+import React, { useState } from "react";
+import { API } from "../../config";
+import Axios from "axios";
+// import Link from "next/link";
+// import { useState, useEffect } from "react";
+// import Router from "next/router";
+// import dynamic from "next/dynamic";
+// import { createBlog } from "../../actions/blog";
+// import { withRouter } from "next/router";
 
-function DatePickerWrapper(props) {
-  const {
-    input: { name, onChange, value, ...restInput },
-    meta,
-    ...rest
-  } = props;
-  const showError =
-    ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
-    meta.touched;
+// import "./styles.css";
+
+const Affiliation = [
+  { key: 1, value: "Veteran" },
+  { key: 2, value: "Military Spouse/Relative" },
+  { key: 3, value: "Civilian" },
+];
+
+const Interest = [
+  { key: 1, value: "Job" },
+  { key: 2, value: "Franchise Ownership" },
+  { key: 3, value: "Investing in MilServ ACD Corp." },
+  { key: 4, value: "News/Update" },
+];
+
+function VetSignUpForm(props) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [milAffiliation, setMilAff] = useState(1);
+  const [careerInterest, setCareerInterest] = useState(1);
+  const [additionalInfo, setAdditionalInfo] = useState("");
+
+  const affiliationSelectChange = (event) => {
+    setMilAff(event.currentTarget.value);
+  };
+
+  const interestSelectChange = (event) => {
+    setCareerInterest(event.currentTarget.value);
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      milAffiliation,
+      careerInterest,
+      additionalInfo,
+    };
+
+    Axios.post(`${API}/veteran`, formData).then((response) => {
+      if (response.data.success) {
+        alert(formData + " Successfully submitted.");
+        props.history.push("/");
+      } else {
+        alert("Sorry.  Failed to submit form");
+      }
+    });
+  };
 
   return (
-    <DatePicker
-      {...rest}
-      name={name}
-      helperText={showError ? meta.error || meta.submitError : undefined}
-      error={showError}
-      inputProps={restInput}
-      onChange={onChange}
-      value={value === "" ? null : value}
-    />
-  );
-}
+    <div className="auth-box">
+      <form onSubmit={onSubmit}>
+        <input
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          placeholder="First name"
+          type="text"
+          name="firstName"
+          required
+        />
 
-function TimePickerWrapper(props) {
-  const {
-    input: { name, onChange, value, ...restInput },
-    meta,
-    ...rest
-  } = props;
-  const showError =
-    ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
-    meta.touched;
+        <input
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          placeholder="Last name"
+          type="text"
+          name="lastName"
+          required
+        />
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email address"
+          type="email"
+          name="email"
+          required
+        />
+        <label>Select Military Affiliation </label>
+        <select onChange={affiliationSelectChange}>
+          {Affiliation.map((item) => (
+            <option key={item.key} value={item.key}>
+              {item.value}{" "}
+            </option>
+          ))}
+        </select>
 
-  return (
-    <TimePicker
-      {...rest}
-      name={name}
-      helperText={showError ? meta.error || meta.submitError : undefined}
-      error={showError}
-      inputProps={restInput}
-      onChange={onChange}
-      value={value === "" ? null : value}
-    />
-  );
-}
+        <label>Tell Us What You're Interested In </label>
+        <select onChange={interestSelectChange}>
+          {Interest.map((item) => (
+            <option key={item.key} value={item.key}>
+              {item.value}{" "}
+            </option>
+          ))}
+        </select>
+        <br />
 
-const onSubmit = async (values) => {
-  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  await sleep(300);
-  window.alert(JSON.stringify(values, 0, 2));
-};
-const validate = (values) => {
-  const errors = {};
-  if (!values.firstName) {
-    errors.firstName = "Required";
-  }
-  if (!values.lastName) {
-    errors.lastName = "Required";
-  }
-  if (!values.email) {
-    errors.email = "Required";
-  }
-  return errors;
-};
-
-function VetSignUpForm() {
-  return (
-    <div style={{ padding: 16, margin: "auto", maxWidth: 600 }}>
-      <CssBaseline />
-      <Typography variant="h4" align="center" component="h1" gutterBottom>
-        🏁 React Final Form
-      </Typography>
-      <Typography variant="h5" align="center" component="h2" gutterBottom>
-        Material-UI Example
-      </Typography>
-      <Typography paragraph>
-        <Link href="https://github.com/erikras/react-final-form#-react-final-form">
-          Read Docs
-        </Link>
-        . This example demonstrates using{" "}
-        <Link href="https://material-ui.com/demos/text-fields/">
-          Material-UI
-        </Link>{" "}
-        form controls.
-      </Typography>
-      <Form
-        onSubmit={onSubmit}
-        initialValues={{ employed: true, stooge: "larry" }}
-        validate={validate}
-        render={({ handleSubmit, reset, submitting, pristine, values }) => (
-          <form onSubmit={handleSubmit} noValidate>
-            <Paper style={{ padding: 16 }}>
-              <Grid container alignItems="flex-start" spacing={2}>
-                <Grid item xs={6}>
-                  <Field
-                    fullWidth
-                    required
-                    name="firstName"
-                    component={TextField}
-                    type="text"
-                    label="First Name"
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Field
-                    fullWidth
-                    required
-                    name="lastName"
-                    component={TextField}
-                    type="text"
-                    label="Last Name"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <Field
-                    name="email"
-                    fullWidth
-                    required
-                    component={TextField}
-                    type="email"
-                    label="Email"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <FormControlLabel
-                    label="Employed"
-                    control={
-                      <Field
-                        name="employed"
-                        component={Checkbox}
-                        type="checkbox"
-                      />
-                    }
-                  />
-                </Grid>
-                <Grid item>
-                  <FormControl component="fieldset">
-                    <FormLabel component="legend">Best Stooge</FormLabel>
-                    <RadioGroup row>
-                      <FormControlLabel
-                        label="Larry"
-                        control={
-                          <Field
-                            name="stooge"
-                            component={Radio}
-                            type="radio"
-                            value="larry"
-                          />
-                        }
-                      />
-                      <FormControlLabel
-                        label="Moe"
-                        control={
-                          <Field
-                            name="stooge"
-                            component={Radio}
-                            type="radio"
-                            value="moe"
-                          />
-                        }
-                      />
-                      <FormControlLabel
-                        label="Curly"
-                        control={
-                          <Field
-                            name="stooge"
-                            component={Radio}
-                            type="radio"
-                            value="curly"
-                          />
-                        }
-                      />
-                    </RadioGroup>
-                  </FormControl>
-                </Grid>
-                <Grid item>
-                  <FormControl component="fieldset">
-                    <FormLabel component="legend">Sauces</FormLabel>
-                    <FormGroup row>
-                      <FormControlLabel
-                        label="Ketchup"
-                        control={
-                          <Field
-                            name="sauces"
-                            component={Checkbox}
-                            type="checkbox"
-                            value="ketchup"
-                          />
-                        }
-                      />
-                      <FormControlLabel
-                        label="Mustard"
-                        control={
-                          <Field
-                            name="sauces"
-                            component={Checkbox}
-                            type="checkbox"
-                            value="mustard"
-                          />
-                        }
-                      />
-                      <FormControlLabel
-                        label="Salsa"
-                        control={
-                          <Field
-                            name="sauces"
-                            component={Checkbox}
-                            type="checkbox"
-                            value="salsa"
-                          />
-                        }
-                      />
-                      <FormControlLabel
-                        label="Guacamole 🥑"
-                        control={
-                          <Field
-                            name="sauces"
-                            component={Checkbox}
-                            type="checkbox"
-                            value="guacamole"
-                          />
-                        }
-                      />
-                    </FormGroup>
-                  </FormControl>
-                </Grid>
-                <Grid item xs={12}>
-                  <Field
-                    fullWidth
-                    name="notes"
-                    component={TextField}
-                    multiline
-                    label="Notes"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <Field
-                    fullWidth
-                    name="city"
-                    component={Select}
-                    label="Select a City"
-                    formControlProps={{ fullWidth: true }}
-                  >
-                    <MenuItem value="London">London</MenuItem>
-                    <MenuItem value="Paris">Paris</MenuItem>
-                    <MenuItem value="Budapest">
-                      A city with a very long Name
-                    </MenuItem>
-                  </Field>
-                </Grid>
-                <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                  <Grid item xs={6}>
-                    <Field
-                      name="rendez-vous"
-                      component={DatePickerWrapper}
-                      fullWidth
-                      margin="normal"
-                      label="Rendez-vous"
-                    />
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Field
-                      name="alarm"
-                      component={TimePickerWrapper}
-                      fullWidth
-                      margin="normal"
-                      label="Alarm"
-                    />
-                  </Grid>
-                </MuiPickersUtilsProvider>
-                <Grid item style={{ marginTop: 16 }}>
-                  <Button
-                    type="button"
-                    variant="contained"
-                    onClick={reset}
-                    disabled={submitting || pristine}
-                  >
-                    Reset
-                  </Button>
-                </Grid>
-                <Grid item style={{ marginTop: 16 }}>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    type="submit"
-                    disabled={submitting}
-                  >
-                    Submit
-                  </Button>
-                </Grid>
-              </Grid>
-            </Paper>
-            <pre>{JSON.stringify(values, 0, 2)}</pre>
-          </form>
-        )}
-      />
+        <textarea
+          value={additionalInfo}
+          onChange={(e) => setAdditionalInfo(e.target.value)}
+          placeholder="Tell Us More!"
+          type="text"
+          name="additionalInfo"
+        />
+        <br></br>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
-
 export default VetSignUpForm;
