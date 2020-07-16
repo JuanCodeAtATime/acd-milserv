@@ -37,6 +37,7 @@ const Header = (props) => {
           <NavLink className="font-weight-bold">
             <NavbarBrand className="navBarLogo">
               <img
+                //Try makeStyle classes to ref image within file
                 src="../static/images/owllogo.jpg"
                 width="45px"
                 height="40px"

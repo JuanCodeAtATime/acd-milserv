@@ -14,18 +14,15 @@ exports.create = (req, res) => {
 };
 
 exports.list = (req, res) => {
-  Veteran.find({}, (error, found) => {
-    // Throw any errors to the console
-    if (error) {
-      console.log(error);
+  Veteran.find({}).exec((err, data) => {
+    if (err) {
+      return res.json({
+        error: errorHandler(err),
+      });
     }
-    // If there are no errors, send the data to the browser as json
-    else {
-      res.json(found);
-    }
+    res.json(data);
   });
 };
-
 // exports.read = (req, res) => {
 //   const slug = req.params.slug.toLowerCase();
 //   Veteran.findOne({ slug })

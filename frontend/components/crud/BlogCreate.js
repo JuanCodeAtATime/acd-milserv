@@ -221,7 +221,7 @@ const CreateBlog = ({ router }) => {
         </div>
 
         <div>
-          <button type="submit" className="btn btn-info">
+          <button type="submit" className="authBtns">
             Publish
           </button>
         </div>

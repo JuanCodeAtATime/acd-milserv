@@ -7,10 +7,12 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Link from "next/link";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    marginBottom: 20,
   },
 });
 
@@ -38,12 +40,16 @@ export default function BlogCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Write
-        </Button>
-        <Button size="small" color="primary">
-          Create Categories
-        </Button>
+        <a href="/admin/crud/blog">
+          <Button size="small" color="primary">
+            Write
+          </Button>
+        </a>
+        <a href="/admin/crud/category-tag">
+          <Button size="small" color="primary">
+            Create Categories
+          </Button>
+        </a>
       </CardActions>
     </Card>
   );

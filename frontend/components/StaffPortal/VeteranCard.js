@@ -38,7 +38,7 @@ export default function VeteranCard() {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          View
+          <a href="/admin/crud/veteran-list">View</a>
         </Button>
         <Button size="small" color="primary">
           Manage

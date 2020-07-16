@@ -33,11 +33,11 @@ const AdminIndex = () => {
           </div>
           <div
             className="row"
-            style={{ height: "130px", paddingTop: "30px", paddingLeft: "60px" }}
+            style={{ height: "180px", paddingTop: "30px", paddingLeft: "60px" }}
           >
-            <div className="col-md-4">
+            <div className="col-md-5">
               <h2 className="landing-cta about-header" id="landing-cta">
-                STAFF PORTAL
+                STAFF DASHBOARD
               </h2>
             </div>
           </div>
@@ -45,45 +45,14 @@ const AdminIndex = () => {
           <div className="row staff-portal-row text-center justify-content-center">
             <div className="col-md-3 staff-portal-cols">
               <ManageCard />
-              {/* <Link href="/admin/crud/blog">
-                <a>
-                  <button className="staff-btns" id="staff-btn-manage">
-                    <FontAwesomeIcon icon={faCheckSquare}></FontAwesomeIcon>{" "}
-                    Manage
-                  </button>
-                </a>
-              </Link> */}
             </div>
 
             <div className="col-md-3 staff-portal-cols">
               <BlogCard />
-              {/* <Link href="/admin/crud/blog">
-                <button className="staff-btns" id="write-btn">
-                  <FontAwesomeIcon icon={faBook}></FontAwesomeIcon> Write
-                </button>
-              </Link> */}
             </div>
-
-            {/* <div className="col-md-3 staff-portal-cols">
-              <CreateCard />
-              <Link href="/admin/crud/category-tag">
-                <a>
-                  <button className="staff-btns" id="create-btn">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon> Create
-                  </button>
-                </a>
-              </Link>
-            </div> */}
 
             <div className="col-md-3 staff-portal-cols">
               <VeteranCard />
-              {/* <Link href="/admin/crud/category-tag">
-                <a>
-                  <button className="staff-btns" id="create-btn">
-                    <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon> Create
-                  </button>
-                </a>
-              </Link> */}
             </div>
           </div>
         </section>

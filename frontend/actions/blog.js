@@ -28,3 +28,16 @@ export const listBlogsWithCategoriesAndTags = () => {
     })
     .catch((err) => console.log(err));
 };
+
+export const listVeterans = () => {
+  return fetch(`${API}/veterans`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};

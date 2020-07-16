@@ -88,8 +88,15 @@ h2.about-header {
 
 /* End About page */
 
+.navBarOwl {
+  background-image: url("../images/owllogo.jpg");
+  background-size: 45px 40px;
+  background-repeat: no-repeat;
+}
+
 .navBarLogo {
   color: #8d54b5 !important;
+
   font-weight: 700;
   font-size: 2rem;
   position: relative;
@@ -370,7 +377,7 @@ span.navbar-toggler-icon {
 .staff-portal-row {
   margin-bottom: 80px;
   background-color: rgba(255, 255, 255, 0.75);
-  padding: 20px;
+  padding: 30px;
   display: flex;
 }
 
