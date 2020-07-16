@@ -32,7 +32,7 @@ export default function LandingCardsOne() {
       id="distributors-color"
     >
       <CardContent>
-        <CardMedia title="Paella dish">
+        <CardMedia title="Distributors Card">
           <FontAwesomeIcon className="icons" icon={faTruck} />
         </CardMedia>
 

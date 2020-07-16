@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, PropTypes } from "react";
 import { API } from "../../config";
 import Axios from "axios";
-// import Link from "next/link";
-// import { useState, useEffect } from "react";
-// import Router from "next/router";
-// import dynamic from "next/dynamic";
-// import { createBlog } from "../../actions/blog";
+import { makeStyles } from "@material-ui/core/styles";
 // import { withRouter } from "next/router";
-
-// import "./styles.css";
+import Router from "next/router";
 
 const Affiliation = [
   { key: 1, value: "Veteran" },
@@ -23,7 +18,14 @@ const Interest = [
   { key: 4, value: "News/Update" },
 ];
 
-function VetSignUpForm(props) {
+const useStyles = makeStyles({
+  root: {
+    width: "auto",
+  },
+});
+
+export default function VetSignUpForm(props) {
+  const classes = useStyles();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -54,7 +56,7 @@ function VetSignUpForm(props) {
     Axios.post(`${API}/veteran`, formData).then((response) => {
       if (response.data.success) {
         alert(formData + " Successfully submitted.");
-        props.history.push("/");
+        Router.replace("/");
       } else {
         alert("Sorry.  Failed to submit form");
       }
@@ -62,26 +64,53 @@ function VetSignUpForm(props) {
   };
 
   return (
-    <div className="auth-box">
+    <div>
       <form onSubmit={onSubmit}>
-        <input
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          placeholder="First name"
-          type="text"
-          name="firstName"
-          required
-        />
+        <h2>
+          <b
+            style={{
+              color: "#8d54b5",
+              fontWeight: "800",
+            }}
+          >
+            WE'RE HIRING!
+          </b>
+        </h2>
+        <h4>
+          <em
+            style={{
+              color: "black",
+              fontWeight: "600",
+              fontSize: ".96rem",
+            }}
+          >
+            Fill out form to learn more
+          </em>
+        </h4>
+        <div>
+          <input
+            style={{ borderRadius: 5, marginRight: 2 }}
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            placeholder="First name"
+            type="text"
+            name="firstName"
+            required
+          />
 
+          <input
+            style={{ borderRadius: 5 }}
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            placeholder="Last name"
+            type="text"
+            name="lastName"
+            required
+          />
+        </div>
+        <br></br>
         <input
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-          placeholder="Last name"
-          type="text"
-          name="lastName"
-          required
-        />
-        <input
+          style={{ borderRadius: 5 }}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email address"
@@ -89,17 +118,46 @@ function VetSignUpForm(props) {
           name="email"
           required
         />
-        <label>Select Military Affiliation </label>
-        <select onChange={affiliationSelectChange}>
-          {Affiliation.map((item) => (
-            <option key={item.key} value={item.key}>
-              {item.value}{" "}
-            </option>
-          ))}
-        </select>
+        <div>
+          <label
+            style={{
+              marginTop: "20px",
+              marginRight: 3,
+              color: "black",
+              fontWeight: "600",
+              fontSize: ".90rem",
+            }}
+          >
+            Select Military Affiliation{" "}
+          </label>
+          <select
+            style={{ borderRadius: 5, marginLeft: 3 }}
+            className={classes.vetForm}
+            onChange={affiliationSelectChange}
+          >
+            {Affiliation.map((item) => (
+              <option key={item.key} value={item.key}>
+                {item.value}{" "}
+              </option>
+            ))}
+          </select>
+        </div>
 
-        <label>Tell Us What You're Interested In </label>
-        <select onChange={interestSelectChange}>
+        <label
+          style={{
+            marginTop: "20px",
+            marginRight: 3,
+            color: "black",
+            fontWeight: "600",
+            fontSize: ".90rem",
+          }}
+        >
+          Tell Us What You're Interested In{" "}
+        </label>
+        <select
+          style={{ borderRadius: 5, marginLeft: 3 }}
+          onChange={interestSelectChange}
+        >
           {Interest.map((item) => (
             <option key={item.key} value={item.key}>
               {item.value}{" "}
@@ -107,18 +165,30 @@ function VetSignUpForm(props) {
           ))}
         </select>
         <br />
-
+        <label
+          style={{
+            marginTop: "20px",
+            marginRight: 3,
+            color: "black",
+            fontWeight: "600",
+            fontSize: ".90rem",
+          }}
+        >
+          Tell Us More{" "}
+        </label>
         <textarea
+          style={{ marginTop: "", width: "100%", height: 200, borderRadius: 5 }}
           value={additionalInfo}
           onChange={(e) => setAdditionalInfo(e.target.value)}
-          placeholder="Tell Us More!"
+          // placeholder="Tell Us More!"
           type="text"
           name="additionalInfo"
         />
         <br></br>
-        <button type="submit">Submit</button>
+        <button type="submit" className="authBtns" onClick={onSubmit}>
+          Submit
+        </button>
       </form>
     </div>
   );
 }
-export default VetSignUpForm;

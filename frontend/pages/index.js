@@ -30,7 +30,9 @@ const Index = () => {
         </div>
         <div className="row program-your-career pl-3 pr-3">
           <div className="col-md-3 mb-2 col-left">
-            <LandingCardsOne />
+            <a href="/veteran-jobs">
+              <LandingCardsOne />
+            </a>
           </div>
           <div className="col-md-3 mb-2 col-middle">
             <LandingCardsTwo />

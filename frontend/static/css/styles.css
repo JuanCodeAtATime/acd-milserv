@@ -211,6 +211,7 @@ Media queries needed to prevent buttons from elongating in collapsible menu */
 .authBtns {
   background-color: #8d54b5 !important ;
   border-radius: 5px;
+  color: #ffffff;
   margin: 2px;
   display: inline-block;
   padding: auto 1px;
@@ -433,10 +434,22 @@ h6.title {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-.signinPage {
+.signinPage,
+.vetjobs-page {
   background-image: url("../images/landing-image.jpg");
 }
 
 .nprogress-busy {
   color: #8d54b5 !important;
+}
+
+/* Veterans Form Page  */
+.vetjobs-row {
+  margin-top: 5rem;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+input > form.vet-form {
+  border-radius: 10px;
 }

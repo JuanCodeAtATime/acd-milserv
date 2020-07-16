@@ -21,7 +21,6 @@ export default function LandingCardsOne() {
   const classes = useStyles();
 
   return (
-    // <Link to="/" style={{ textDecoration: "none" }}>
     <Grid
       item
       component={Card}
@@ -32,13 +31,12 @@ export default function LandingCardsOne() {
       id="veterans-color"
     >
       <CardContent>
-        <CardMedia title="Paella dish">
+        <CardMedia title="Veterans Card">
           <FontAwesomeIcon icon={faFlagUsa} className="icons" />
         </CardMedia>
 
         <Typography className="categoryTitle">VETERANS</Typography>
       </CardContent>
     </Grid>
-    // </Link>
   );
 }
