@@ -40,7 +40,7 @@ export default function BlogCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <a href="/admin/crud/blog">
+        <a href="/admin/blog">
           <Button size="small" color="primary">
             Write
           </Button>

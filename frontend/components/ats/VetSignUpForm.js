@@ -32,6 +32,8 @@ export default function VetSignUpForm(props) {
   const [milAffiliation, setMilAff] = useState(1);
   const [careerInterest, setCareerInterest] = useState(1);
   const [additionalInfo, setAdditionalInfo] = useState("");
+  const [currentLocation, setCurrentLocation] = useState("");
+  const [projectedHOR, setProjHOR] = useState("");
 
   const affiliationSelectChange = (event) => {
     setMilAff(event.currentTarget.value);
@@ -51,6 +53,8 @@ export default function VetSignUpForm(props) {
       milAffiliation,
       careerInterest,
       additionalInfo,
+      projectedHOR,
+      currentLocation,
     };
 
     Axios.post(`${API}/veteran`, formData).then((response) => {
@@ -70,10 +74,9 @@ export default function VetSignUpForm(props) {
           <b
             style={{
               color: "#8d54b5",
-              fontWeight: "800",
             }}
           >
-            WE'RE HIRING!
+            WE'RE GROWING OUR TEAM!
           </b>
         </h2>
         <h4>
@@ -89,7 +92,7 @@ export default function VetSignUpForm(props) {
         </h4>
         <div>
           <input
-            style={{ borderRadius: 5, marginRight: 2 }}
+            style={{ borderRadius: 5, marginLeft: 5, marginRight: 3 }}
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="First name"
@@ -110,7 +113,7 @@ export default function VetSignUpForm(props) {
         </div>
         <br></br>
         <input
-          style={{ borderRadius: 5 }}
+          style={{ borderRadius: 5, margin: 5 }}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email address"
@@ -118,6 +121,28 @@ export default function VetSignUpForm(props) {
           name="email"
           required
         />
+
+        <div>
+          <input
+            style={{ borderRadius: 5, margin: 5, width: "80%" }}
+            value={currentLocation}
+            onChange={(e) => setCurrentLocation(e.target.value)}
+            placeholder="Current Location or Duty Station"
+            type="text"
+            name="currentLocation"
+            required
+          />
+          <br></br>
+          <input
+            style={{ borderRadius: 5, margin: 5 }}
+            value={projectedHOR}
+            onChange={(e) => setProjHOR(e.target.value)}
+            placeholder="Projected Home State"
+            type="text"
+            name="projectedHOR"
+            required
+          />
+        </div>
         <div>
           <label
             style={{

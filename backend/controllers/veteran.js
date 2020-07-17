@@ -23,6 +23,20 @@ exports.list = (req, res) => {
     res.json(data);
   });
 };
+
+exports.lastList = (req, res) => {
+  Veteran.find({})
+    .sort({ _id: -1 })
+    .limit(10)
+    .exec((err, data) => {
+      if (err) {
+        return res.json({
+          error: errorHandler(err),
+        });
+      }
+      res.json(data);
+    });
+};
 // exports.read = (req, res) => {
 //   const slug = req.params.slug.toLowerCase();
 //   Veteran.findOne({ slug })

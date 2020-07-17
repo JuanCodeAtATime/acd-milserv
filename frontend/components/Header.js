@@ -144,31 +144,27 @@ const Header = (props) => {
             )} */}
 
             {isAuth() && isAuth().role === 0 && (
-              <NavItem>
-                <Link href="/user">
-                  <NavLink className="listItems">
-                    {" "}
-                    {`${isAuth().name}'s Portal`}
-                  </NavLink>
-                </Link>
-              </NavItem>
+              <Link href="/user">
+                <NavItem className="listItems">
+                  {" "}
+                  {`${isAuth().name}'s Portal`}
+                </NavItem>
+              </Link>
             )}
 
             {isAuth() && isAuth().role === 1 && (
-              <NavItem>
-                <Link href="/admin">
-                  <NavLink className="listItems">
-                    <FontAwesomeIcon icon={faLaptopCode} />{" "}
-                    {`${isAuth().name}'s Portal`}
-                  </NavLink>
-                </Link>
-              </NavItem>
+              <Link href="/admin">
+                <NavItem className="listItems">
+                  <FontAwesomeIcon icon={faLaptopCode} />{" "}
+                  {`${isAuth().name}'s Portal`}
+                </NavItem>
+              </Link>
             )}
 
             {isAuth() && (
               <NavItem>
                 <NavLink
-                  className="listItems"
+                  className="signout"
                   onClick={() => signout(() => Router.replace("/signin"))}
                 >
                   <FontAwesomeIcon icon={faDoorOpen} /> Signout

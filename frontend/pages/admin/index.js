@@ -43,15 +43,15 @@ const AdminIndex = () => {
           </div>
 
           <div className="row staff-portal-row text-center justify-content-center">
-            <div className="col-md-3 staff-portal-cols">
+            <div className="col-md-3 staff-portal-cols mb-3">
               <ManageCard />
             </div>
 
-            <div className="col-md-3 staff-portal-cols">
+            <div className="col-md-3 staff-portal-cols mb-3">
               <BlogCard />
             </div>
 
-            <div className="col-md-3 staff-portal-cols">
+            <div className="col-md-3 staff-portal-cols mb-3">
               <VeteranCard />
             </div>
           </div>

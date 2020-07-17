@@ -11,6 +11,7 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    marginBottom: 20,
   },
 });
 
@@ -38,7 +39,7 @@ export default function VeteranCard() {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          <a href="/admin/crud/veteran-list">View</a>
+          <a href="/admin/veteran-list">View</a>
         </Button>
         <Button size="small" color="primary">
           Manage

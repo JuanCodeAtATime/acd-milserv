@@ -243,8 +243,16 @@ Media queries needed to prevent buttons from elongating in collapsible menu */
   cursor: pointer;
   transition: all 0.2s ease-in-out !important;
 }
+.signout {
+  color: darkred !important;
+  font-weight: 600;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out !important;
+}
 
-.listItems:hover {
+.listItems:hover,
+.signout {
   transform: scale(1.08) !important;
 }
 
@@ -459,4 +467,30 @@ h6.title {
 
 input > form.vet-form {
   border-radius: 10px;
+}
+
+/* Veterans ATS Page */
+
+.vetATSCards {
+  margin: 0.5rem 0.25rem !important;
+  font-weight: bold !important;
+  height: auto !important;
+  /* min-height: 165.9px !important; */
+  min-width: 285px !important;
+  /* min-width: 165.9px !important; */
+  background-color: #ffffff !important;
+  border-top: solid #8d54b5 10px;
+  color: #383838;
+  border-radius: 5px !important;
+  position: relative;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.vetATSCards:hover {
+  transform: scale(1.03) !important;
+}
+
+#vetCardTime {
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
 }

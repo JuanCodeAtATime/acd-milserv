@@ -13,6 +13,15 @@ const veteranSchema = new mongoose.Schema({
     required: true,
     max: 32,
   },
+  currentLocation: {
+    type: String,
+    trim: true,
+    required: true,
+  },
+  projectedHOR: {
+    type: String,
+    trim: true,
+  },
   email: {
     type: String,
     trim: true,

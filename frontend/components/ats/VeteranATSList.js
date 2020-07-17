@@ -2,6 +2,18 @@ import React, { Component } from "react";
 import { API } from "../../config";
 import Moment from "react-moment";
 import Axios from "axios";
+import moment from "moment";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBeer } from "@fortawesome/free-solid-svg-icons";
+import {
+  Card,
+  CardContent,
+  CardActions,
+  Typography,
+  Grid,
+  Button,
+} from "@material-ui/core";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 // The ...props means, spread all of the passed props onto this element
 
@@ -9,10 +21,12 @@ import Axios from "axios";
 export default class VeteranList extends Component {
   state = {
     veterans: [],
+    lastDate: [],
   };
 
   componentDidMount() {
     this.loadVetsList();
+    this.loadLastSubmission();
     // this.displayRecentNo();
   }
 
@@ -23,8 +37,23 @@ export default class VeteranList extends Component {
           this.setState(
             {
               veterans: res.data,
+            }
+            // console.log("this is the data " + JSON.stringify(res.data))
+          )
+        // this.setState({ ...this.state, numbers: res.data })
+      )
+      .catch((err) => console.log(err));
+  };
+
+  loadLastSubmission = () => {
+    Axios.get(`${API}/veterans-last-submission`)
+      .then(
+        (res) =>
+          this.setState(
+            {
+              lastDate: res.data[0].date,
             },
-            console.log("this is the data" + res.data)
+            console.log("this is the data " + JSON.stringify(res.data[0].date))
           )
         // this.setState({ ...this.state, numbers: res.data })
       )
@@ -46,41 +75,102 @@ export default class VeteranList extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.veterans.length ? (
-          <div>
-            {this.state.veterans
-              .slice(0)
-              .reverse()
-              .map((vets) => (
-                <ul>
-                  <li style={{ border: "solid red 2px" }} key={vets._id}>
-                    <strong style={{ fontFamily: "Quantico" }}>
-                      <h4 style={{ color: "black" }}>
-                        <b>:</b> {vets.lastName}
-                        <span
-                          style={{
-                            backgroundColor: "red",
-                            color: "white",
-                            borderRadius: "50%",
-                            padding: "3px",
-                            marginTop: "2px",
-                          }}
-                        >
-                          {vets.firstName}
-                        </span>
-                      </h4>
-                      <hr></hr>
-                      <h6>
-                        <b>Date: </b>
-                        <Moment format="MM/DD/YYYY, h:mm a">{vets.date}</Moment>
-                      </h6>
-                    </strong>
+      <div className="container">
+        <div className="row" style={{ marginBottom: 50 }}>
+          <div className="col-md-4">
+            <Grid
+              item
+              component={Card}
+              id="veterans-color"
+              style={{ color: "white", marginBottom: "10px" }}
+            >
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h1">
+                  TOTAL APPLICANTS
+                </Typography>
 
-                    <button onClick={() => this.deleteNumber(vets._id)} />
-                  </li>
-                </ul>
-              ))}
+                <Typography gutterBottom variant="h2" component="h2">
+                  {this.state.veterans.length}
+                </Typography>
+              </CardContent>
+            </Grid>
+          </div>
+          <hr></hr>
+
+          <div className="col-md-4">
+            <Grid
+              item
+              component={Card}
+              // xs={12}
+              // s={12}
+              // md={12}
+              style={{ color: "white", marginTop: 2 }}
+              id="veterans-color"
+            >
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h1">
+                  LAST SUBMISSION
+                </Typography>
+
+                <Typography gutterBottom variant="h2" component="h2">
+                  {moment(this.state.lastDate).format("L")}
+                </Typography>
+              </CardContent>
+            </Grid>
+          </div>
+        </div>
+        {this.state.veterans.length ? (
+          <div className="row">
+            <div className="col-md-3 col-sm-12 col-xs-12">
+              {this.state.veterans
+                .slice(0)
+                .reverse()
+                .map((vets) => (
+                  <Grid
+                    item
+                    key={vets._id}
+                    component={Card}
+                    xs={12}
+                    s={6}
+                    md={3}
+                    className="vetATSCards"
+                  >
+                    <CardContent>
+                      <Typography className="categoryTitle">
+                        VETERANS
+                      </Typography>
+                      <Typography variant="h5" component="h3">
+                        {vets.lastName.toUpperCase()},{" "}
+                        {vets.firstName.toUpperCase()}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        id="vetCardTime"
+                        component="p"
+                        style={{ marginTop: 8 }}
+                      >
+                        Email: {vets.email}
+                      </Typography>
+                      {/* <Typography variant="body2" component="p">
+                      {vets.careerInterest}
+                    </Typography> */}
+                      <Typography color="body2" id="vetCardTime" component="p">
+                        Date:{" "}
+                        <Moment format="MM/DD/YYYY, h:mm a">{vets.date}</Moment>
+                      </Typography>
+
+                      {/* <button onClick={() => this.deleteNumber(vets._id)} /> */}
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">
+                        {"  "}
+                        <AccountCircleIcon style={{ marginRight: "4px" }} />
+                        {"  "} MORE INFO
+                      </Button>
+                    </CardActions>
+                  </Grid>
+                ))}
+            </div>
           </div>
         ) : (
           <h3>No Applicants to Display :(</h3>
