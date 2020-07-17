@@ -2,6 +2,9 @@ import Layout from "../components/Layout";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import Biz2Biz from "../components/AboutCards/Biz2Bix";
+import Dir2Consumer from "../components/AboutCards/Dir2Consumer";
+import VetTraining from "../components/AboutCards/VetTraining";
 
 const About = () => {
   return (
@@ -37,8 +40,26 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="aboutSectionTwo ml-0">
+      <section>
         {" "}
+        <div className="row staff-portal-row text-center justify-content-center">
+          <div className="col-md-3 mt-3 mb-2">
+            <h2 style={{ fontWeight: "600", color: "#383838" }}>
+              OUR SERVICES
+            </h2>
+          </div>
+          <div className="col-md-3 staff-portal-cols mb-3">
+            <Dir2Consumer />
+          </div>
+
+          <div className="col-md-3 staff-portal-cols mb-3">
+            <Biz2Biz />
+          </div>
+
+          <div className="col-md-3 staff-portal-cols mb-3">
+            <VetTraining />
+          </div>
+        </div>
         <div className="row text-center">
           <div
             className="col-md-6 aboutSections"

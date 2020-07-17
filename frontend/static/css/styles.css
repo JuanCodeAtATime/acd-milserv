@@ -327,6 +327,13 @@ span.navbar-toggler-icon {
   margin-top: 2rem;
 }
 
+.services-icons {
+  font-size: 20px !important;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
 .categoryTitle {
   font-size: 1.5rem !important;
   font-weight: bold !important;
