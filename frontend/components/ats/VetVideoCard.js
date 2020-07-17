@@ -10,10 +10,10 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    width: 385,
+    width: "auto",
+    marginTop: 10,
   },
   wrapper: {
-    marginTop: 10,
     marginBottom: 10,
   },
 });
@@ -23,6 +23,31 @@ export default function VetVideoCard() {
 
   return (
     <div className={classes.wrapper}>
+      <h2>
+        <b
+          style={{
+            color: "whitesmoke",
+            marginBottom: 10,
+          }}
+        >
+          WE'RE HIRING!
+        </b>
+      </h2>
+      <br></br>
+      <section>
+        <p
+          style={{
+            color: "whitesmoke",
+            fontWeight: 600,
+          }}
+        >
+          <em>Click on location to learn more!</em>
+        </p>
+        <button className="btn btn-primary">Maryland</button>{" "}
+        <button className="btn btn-danger">Texas</button>{" "}
+        <button className="btn btn-success">New York</button>
+      </section>
+      <br></br>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia

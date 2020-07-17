@@ -76,7 +76,7 @@ export default function VetSignUpForm(props) {
               color: "#8d54b5",
             }}
           >
-            WE'RE GROWING OUR TEAM!
+            JOIN OUR TEAM!
           </b>
         </h2>
         <h4>
@@ -210,7 +210,12 @@ export default function VetSignUpForm(props) {
           name="additionalInfo"
         />
         <br></br>
-        <button type="submit" className="authBtns" onClick={onSubmit}>
+        <button
+          type="submit"
+          style={{ marginTop: 50 }}
+          className="btn btn-warning"
+          onClick={onSubmit}
+        >
           Submit
         </button>
       </form>
