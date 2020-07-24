@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+// import pic from "../../static/images/MilDiscountOwl.png";
 
 const useStyles = makeStyles({
   root: {
@@ -43,9 +44,7 @@ export default function RetVideoCard() {
         >
           <em>Click on location to learn more!</em>
         </p>
-        <button className="btn btn-primary">Maryland</button>{" "}
-        <button className="btn btn-danger">Texas</button>{" "}
-        <button className="btn btn-success">New York</button>
+        <div>{/* Place Picture of Mil Discount Owl here */}</div>
       </section>
       <br></br>
       <Card className={classes.root}>

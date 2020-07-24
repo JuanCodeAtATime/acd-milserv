@@ -501,3 +501,27 @@ input > form.vet-form {
   font-size: 0.78rem !important;
   font-weight: 600 !important;
 }
+
+/* Forms Styles */
+input.formStyles {
+  border: "solid #383838 .75px" !important;
+  border-radius: 5 !important;
+  margin-left: 5 !important;
+  margin-right: 3 !important;
+  padding-left: 8 !important;
+}
+
+/* State Multi Select on Retailers page */
+
+.multi-select {
+  color: #383838 !important;
+  --rmsc-main: #4285f4;
+  --rmsc-hover: #383838;
+  --rmsc-selected: #e2e6ea;
+  --rmsc-border: #ccc;
+  --rmsc-gray: #aaa;
+  --rmsc-bg: #383838;
+  --rmsc-p: 10px; /* Spacing */
+  --rmsc-radius: 4px; /* Radius */
+  --rmsc-h: 38px; /* Height */
+}

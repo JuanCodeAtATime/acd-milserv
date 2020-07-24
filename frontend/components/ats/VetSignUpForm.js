@@ -92,7 +92,12 @@ export default function VetSignUpForm(props) {
         </h4>
         <div>
           <input
-            style={{ borderRadius: 5, marginLeft: 5, marginRight: 3 }}
+            style={{
+              border: "solid #383838 .75px",
+              borderRadius: 5,
+              marginLeft: 5,
+              marginRight: 3,
+            }}
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="First name"
@@ -102,7 +107,7 @@ export default function VetSignUpForm(props) {
           />
 
           <input
-            style={{ borderRadius: 5 }}
+            style={{ border: "solid #383838 .75px", borderRadius: 5 }}
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             placeholder="Last name"
@@ -113,7 +118,7 @@ export default function VetSignUpForm(props) {
         </div>
         <br></br>
         <input
-          style={{ borderRadius: 5, margin: 5 }}
+          style={{ border: "solid #383838 .75px", borderRadius: 5, margin: 5 }}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email address"
@@ -124,7 +129,12 @@ export default function VetSignUpForm(props) {
 
         <div>
           <input
-            style={{ borderRadius: 5, margin: 5, width: "80%" }}
+            style={{
+              border: "solid #383838 .75px",
+              borderRadius: 5,
+              margin: 5,
+              width: "80%",
+            }}
             value={currentLocation}
             onChange={(e) => setCurrentLocation(e.target.value)}
             placeholder="Current Location or Duty Station"
@@ -134,7 +144,11 @@ export default function VetSignUpForm(props) {
           />
           <br></br>
           <input
-            style={{ borderRadius: 5, margin: 5 }}
+            style={{
+              border: "solid #383838 .75px",
+              borderRadius: 5,
+              margin: 5,
+            }}
             value={projectedHOR}
             onChange={(e) => setProjHOR(e.target.value)}
             placeholder="Projected Home State"
@@ -202,7 +216,13 @@ export default function VetSignUpForm(props) {
           Tell Us More{" "}
         </label>
         <textarea
-          style={{ marginTop: "", width: "100%", height: 200, borderRadius: 5 }}
+          style={{
+            border: "solid #383838 .75px",
+            marginTop: "",
+            width: "100%",
+            height: 200,
+            borderRadius: 5,
+          }}
           value={additionalInfo}
           onChange={(e) => setAdditionalInfo(e.target.value)}
           // placeholder="Tell Us More!"

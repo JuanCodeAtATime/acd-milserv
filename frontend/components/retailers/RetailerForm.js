@@ -10,75 +10,7 @@ import Axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 // import { withRouter } from "next/router";
 import Router from "next/router";
-
-const LicenseState = [
-  "Alabama",
-  "Alaska",
-  "American Samoa",
-  "Arizona",
-  "Arkansas",
-  "California",
-  "Colorado",
-  "Connecticut",
-  "Delaware",
-  "District of Columbia",
-  "Federated States of Micronesia",
-  "Florida",
-  "Georgia",
-  "Guam",
-  "Hawaii",
-  "Idaho",
-  "Illinois",
-  "Indiana",
-  "Iowa",
-  "Kansas",
-  "Kentucky",
-  "Louisiana",
-  "Maine",
-  "Marshall Islands",
-  "Maryland",
-  "Massachusetts",
-  "Michigan",
-  "Minnesota",
-  "Mississippi",
-  "Missouri",
-  "Montana",
-  "Nebraska",
-  "Nevada",
-  "New Hampshire",
-  "New Jersey",
-  "New Mexico",
-  "New York",
-  "North Carolina",
-  "North Dakota",
-  "Northern Mariana Islands",
-  "Ohio",
-  "Oklahoma",
-  "Oregon",
-  "Palau",
-  "Pennsylvania",
-  "Puerto Rico",
-  "Rhode Island",
-  "South Carolina",
-  "South Dakota",
-  "Tennessee",
-  "Texas",
-  "Utah",
-  "Vermont",
-  "Virgin Island",
-  "Virginia",
-  "Washington",
-  "West Virginia",
-  "Wisconsin",
-  "Wyoming",
-];
-
-const Interest = [
-  { key: 1, value: "Job" },
-  { key: 2, value: "Franchise Ownership" },
-  { key: 3, value: "Investing in MilServ ACD Corp." },
-  { key: 4, value: "News/Update" },
-];
+import MultiSelect from "react-multi-select-component";
 
 const useStyles = makeStyles({
   root: {
@@ -91,15 +23,65 @@ export default function RetSignUpForm(props) {
   const [retFirstName, setRetFirstName] = useState("");
   const [retLastName, setRetLastName] = useState("");
   const [retEmail, setRetEmail] = useState("");
-  const [licState, setLicState] = useState("");
+  const [licState, setLicState] = useState([]);
   const [retPhoneNo, setRetPhoneNo] = useState("");
   const [stateLicNo, setStateLicNo] = useState("");
   const [coName, setCoName] = useState("");
   const [retAdditionalInfo, setRetAdditionalInfo] = useState("");
 
-  const licStateSelectChange = (event) => {
-    setLicState(event.currentTarget.value);
-  };
+  const options = [
+    { label: "Alabama", value: "AL" },
+    { label: "Alaska", value: "AK" },
+    { label: "Arizona", value: "AZ" },
+
+    { label: "Arkansas", value: "AR" },
+    { label: "Colorado", value: "CO" },
+    { label: "Connecticut", value: "CT" },
+    { label: "Delaware", value: "DE" },
+    { label: "Florida", value: "FL" },
+    { label: "Georgia", value: "GA" },
+    { label: "Hawaii", value: "HI" },
+    { label: "Idaho", value: "ID" },
+    { label: "Illinois", value: "IL" },
+    { label: "Indiana", value: "IN" },
+
+    { label: "Iowa", value: "IA" },
+    { label: "Kansas", value: "KS" },
+    { label: "Kentucky", value: "KY" },
+    { label: "Louisiana", value: "LA" },
+    { label: "Maine", value: "ME" },
+    { label: "Maryland", value: "MD" },
+    { label: "Massachusetts", value: "MA" },
+    { label: "Michigan", value: "MI" },
+    { label: "Minnesota", value: "MN" },
+    { label: "Mississippi", value: "MS" },
+    { label: "Missouri", value: "MO" },
+    { label: "Montana", value: "MT" },
+    { label: "Nebraska", value: "NE" },
+    { label: "Nevada", value: "NV" },
+    { label: "New Hampshire", value: "NH" },
+    { label: "New Jersey", value: "NJ" },
+    { label: "New Mexico", value: "NM" },
+    { label: "New York", value: "NY" },
+    { label: "North Carolina", value: "NC" },
+    { label: "North Dakota", value: "ND" },
+    { label: "Ohio", value: "OH" },
+    { label: "Oklahoma", value: "OK" },
+    { label: "Oregon", value: "OR" },
+    { label: "Pennsylvania", value: "PA" },
+    { label: "Puerto Rico", value: "PR" },
+    { label: "Rhode Island", value: "RI" },
+    { label: "South Carolina", value: "SC" },
+    { label: "South Dakota", value: "SD" },
+    { label: "Tennessee", value: "TN" },
+    { label: "Texas", value: "TX" },
+    { label: "Utah", value: "UT" },
+    { label: "Vermont", value: "VT" },
+    { label: "Washington", value: "WA" },
+    { label: "West Virginia", value: "WV" },
+    { label: "Wisconsin", value: "WI" },
+    { label: "Wyoming", value: "WY" },
+  ];
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -137,6 +119,17 @@ export default function RetSignUpForm(props) {
             RETAILER CONTACT FORM
           </b>
         </h2>
+        <h4>
+          <em
+            style={{
+              color: "black",
+              fontWeight: "600",
+              fontSize: ".96rem",
+            }}
+          >
+            Fill out form to learn more
+          </em>
+        </h4>
 
         <hr></hr>
         <div>
@@ -152,7 +145,14 @@ export default function RetSignUpForm(props) {
             Company Name of DBA (if applicable){" "}
           </label>
           <input
-            style={{ borderRadius: 5, marginLeft: 5, marginRight: 3 }}
+            style={{
+              border: "solid #383838 .75px",
+              borderRadius: 5,
+              marginLeft: 5,
+              marginRight: 3,
+              paddingLeft: 8,
+              width: "75%",
+            }}
             value={coName}
             onChange={(e) => setCoName(e.target.value)}
             placeholder="Company Name"
@@ -176,7 +176,13 @@ export default function RetSignUpForm(props) {
             Contact Information{" "}
           </label>
           <input
-            style={{ borderRadius: 5, marginLeft: 5, marginRight: 3 }}
+            style={{
+              border: "solid #383838 .75px",
+              borderRadius: 5,
+              marginLeft: 5,
+              marginRight: 3,
+              paddingLeft: 8,
+            }}
             value={retFirstName}
             onChange={(e) => setRetFirstName(e.target.value)}
             placeholder="First name"
@@ -186,7 +192,11 @@ export default function RetSignUpForm(props) {
           />
 
           <input
-            style={{ borderRadius: 5 }}
+            style={{
+              borderRadius: 5,
+              border: "solid #383838 .75px",
+              paddingLeft: 8,
+            }}
             value={retLastName}
             onChange={(e) => setRetLastName(e.target.value)}
             placeholder="Last name"
@@ -196,7 +206,12 @@ export default function RetSignUpForm(props) {
           />
 
           <input
-            style={{ borderRadius: 5, margin: 5 }}
+            style={{
+              borderRadius: 5,
+              margin: 5,
+              border: "solid #383838 .75px",
+              paddingLeft: 8,
+            }}
             value={retEmail}
             onChange={(e) => setRetEmail(e.target.value)}
             placeholder="Email address"
@@ -217,7 +232,12 @@ export default function RetSignUpForm(props) {
             Contact Number{" "}
           </label>
           <input
-            style={{ borderRadius: 5, margin: 5 }}
+            style={{
+              borderRadius: 5,
+              margin: 5,
+              border: "solid #383838 .75px",
+              paddingLeft: 8,
+            }}
             value={retPhoneNo}
             onChange={(e) => setRetPhoneNo(e.target.value)}
             placeholder="ex: 555-555-5555"
@@ -241,17 +261,14 @@ export default function RetSignUpForm(props) {
           >
             State(s) Where You Possess Alchohol Licenses{" "}
           </label>
-          <select
-            style={{ borderRadius: 5, marginLeft: 3 }}
-            className={classes.vetForm}
-            onChange={licStateSelectChange}
-          >
-            {LicenseState.map((item) => (
-              <option key={item.key} value={item.key}>
-                {item.value}{" "}
-              </option>
-            ))}
-          </select>
+          {/* <pre>{JSON.stringify(licState)}</pre> */}
+          <MultiSelect
+            options={options}
+            value={licState}
+            placeholder={"Select all that apply"}
+            onChange={setLicState}
+            labelledBy={"Select"}
+          />
         </div>
 
         <label
@@ -266,7 +283,12 @@ export default function RetSignUpForm(props) {
           State License Number{" "}
         </label>
         <input
-          style={{ borderRadius: 5, margin: 5 }}
+          style={{
+            border: "solid #383838 .75px",
+            borderRadius: 5,
+            margin: 5,
+            paddingLeft: 8,
+          }}
           value={stateLicNo}
           onChange={(e) => setStateLicNo(e.target.value)}
           placeholder="State License Number"
@@ -287,7 +309,13 @@ export default function RetSignUpForm(props) {
           Comment or Message{" "}
         </label>
         <textarea
-          style={{ marginTop: "", width: "100%", height: 200, borderRadius: 5 }}
+          style={{
+            border: "solid #383838 .75px",
+            marginTop: "",
+            width: "100%",
+            height: 200,
+            borderRadius: 5,
+          }}
           value={retAdditionalInfo}
           onChange={(e) => setRetAdditionalInfo(e.target.value)}
           // placeholder="Tell Us More!"
