@@ -60,7 +60,10 @@ const Header = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>MAKERS</DropdownItem>
-                <DropdownItem>RETAILERS</DropdownItem>
+                <Link href="/retailers">
+                  <DropdownItem>RETAILERS</DropdownItem>
+                </Link>
+
                 <DropdownItem>DISTRIBUTORS</DropdownItem>
                 <DropdownItem divider />
                 {/* {!isAuth() && (
