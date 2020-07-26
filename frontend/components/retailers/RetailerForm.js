@@ -113,6 +113,9 @@ export default function RetSignUpForm(props) {
             RETAILER CONTACT FORM
           </b>
         </h2>
+        <div>
+          <img src="../../static/images/mildiscowl.png" width="175px"></img>
+        </div>
         <h4>
           <em
             style={{

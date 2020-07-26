@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-// import pic from "../../static/images/MilDiscountOwl.png";
+// import pic from "../../static/images/mildiscowl.png";
 
 const useStyles = makeStyles({
   root: {
@@ -24,45 +24,23 @@ export default function RetVideoCard() {
 
   return (
     <div className={classes.wrapper}>
-      <h2>
-        <b
-          style={{
-            color: "whitesmoke",
-            marginBottom: 10,
-          }}
-        >
-          CHECK OUT THE VIDEO!
-        </b>
-      </h2>
-      <br></br>
-      <section>
-        <p
-          style={{
-            color: "whitesmoke",
-            fontWeight: 600,
-          }}
-        >
-          <em>Click on location to learn more!</em>
-        </p>
-        <div>{/* Place Picture of Mil Discount Owl here */}</div>
-      </section>
       <br></br>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
             component="img"
             alt="Video for Veterans"
-            height="140"
+            height="240"
             image="../../static/images/retailervid2.png"
             title="MilServe Video for Veterans"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              VIDEO FOR RETAILERS
+              SOLUTION FOR RETAILERS
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Learn more about our training program for prior service and
-              transitioning servicemembers.
+              Watch video to learn about our E-Commerce platform to order
+              alcohol. Delivered by military veterans at no cost to you.
             </Typography>
           </CardContent>
         </CardActionArea>
