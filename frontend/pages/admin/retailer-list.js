@@ -3,7 +3,7 @@ import Admin from "../../components/auth/Admin";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-import VeteranList from "../../components/ats/VeteranATSList";
+import RetailerList from "../../components/retailers/RetailerATSList";
 
 const VeteranATS = () => {
   return (
@@ -39,13 +39,13 @@ const VeteranATS = () => {
             >
               <div className="col-md-5">
                 <h2 className="landing-cta about-header" id="landing-cta">
-                  VETERANS ATS
+                  RETAILER SUBMISSIONS
                 </h2>
               </div>
             </div>
 
             <div className="row staff-portal-row justify-content-center">
-              <VeteranList />
+              <RetailerList />
             </div>
           </section>
         </Admin>

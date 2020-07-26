@@ -33,16 +33,19 @@ export default function ManageCard() {
             PARTNERS
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Track data from Maker, Retailer, and Distributer Partners.
+            Track data from Maker, Retailer, and Distributor Partners.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          View
+          <a href="/admin/retailer-list">Retailers</a>
         </Button>
         <Button size="small" color="primary">
-          Manage
+          <a href="/admin/retailer-list">Makers</a>
+        </Button>
+        <Button size="small" color="primary">
+          <a href="/admin/retailer-list">Distributors</a>
         </Button>
       </CardActions>
     </Card>

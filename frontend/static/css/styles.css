@@ -486,7 +486,6 @@ input > form.vet-form {
   min-width: 285px !important;
   /* min-width: 165.9px !important; */
   background-color: #ffffff !important;
-  border-top: solid #8d54b5 10px;
   color: #383838;
   border-radius: 5px !important;
   position: relative;

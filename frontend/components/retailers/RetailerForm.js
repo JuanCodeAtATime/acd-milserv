@@ -1,9 +1,3 @@
-//Need to change API address for axios call
-//Need to create new schema for Retailers
-//Need to build multi-select options for dropdown menu
-//Need to configure all routes
-//Need to verify all savaeable data names
-
 import React, { useState, PropTypes } from "react";
 import { API } from "../../config";
 import Axios from "axios";
@@ -97,7 +91,7 @@ export default function RetSignUpForm(props) {
       retAdditionalInfo,
     };
 
-    Axios.post(`${API}/veteran`, formData).then((response) => {
+    Axios.post(`${API}/retailer`, formData).then((response) => {
       if (response.data.success) {
         alert(formData + " Successfully submitted.");
         Router.replace("/");

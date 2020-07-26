@@ -1,3 +1,5 @@
+// Find out why phone number is ot CanvasRenderingContext2D.  Start with checking the db
+
 import React, { Component } from "react";
 import { API } from "../../config";
 import Moment from "react-moment";
@@ -18,27 +20,27 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 // The ...props means, spread all of the passed props onto this element
 
 // That way we don't have to define them all individually
-export default class VeteranList extends Component {
+export default class RetailerList extends Component {
   state = {
-    veterans: [],
+    retailers: [],
     lastDate: [],
   };
 
   componentDidMount() {
-    this.loadVetsList();
+    this.loadRetsList();
     this.loadLastSubmission();
     // this.displayRecentNo();
   }
 
-  loadVetsList = () => {
-    Axios.get(`${API}/veterans`)
+  loadRetsList = () => {
+    Axios.get(`${API}/retailers`)
       .then(
         (res) =>
           this.setState(
             {
-              veterans: res.data,
-            }
-            // console.log("this is the data " + JSON.stringify(res.data))
+              retailers: res.data,
+            },
+            console.log("this is the data " + JSON.stringify(res.data))
           )
         // this.setState({ ...this.state, numbers: res.data })
       )
@@ -46,7 +48,7 @@ export default class VeteranList extends Component {
   };
 
   loadLastSubmission = () => {
-    Axios.get(`${API}/veterans-last-submission`)
+    Axios.get(`${API}/retailers-last-submission`)
       .then(
         (res) =>
           this.setState(
@@ -81,16 +83,16 @@ export default class VeteranList extends Component {
             <Grid
               item
               component={Card}
-              id="veterans-color"
+              id="retailers-color"
               style={{ color: "white", marginBottom: "10px" }}
             >
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h1">
-                  TOTAL APPLICANTS
+                  TOTAL RETAILERS
                 </Typography>
 
                 <Typography gutterBottom variant="h2" component="h2">
-                  {this.state.veterans.length}
+                  {this.state.retailers.length}
                 </Typography>
               </CardContent>
             </Grid>
@@ -105,7 +107,7 @@ export default class VeteranList extends Component {
               // s={12}
               // md={12}
               style={{ color: "white", marginTop: 2 }}
-              id="veterans-color"
+              id="retailers-color"
             >
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h1">
@@ -119,47 +121,54 @@ export default class VeteranList extends Component {
             </Grid>
           </div>
         </div>
-        {this.state.veterans.length ? (
+        {this.state.retailers.length ? (
           <div className="row">
             <div className="col-md-3 col-sm-12 col-xs-12">
-              {this.state.veterans
+              {this.state.retailers
                 .slice(0)
                 .reverse()
-                .map((vets) => (
+                .map((rets) => (
                   <Grid
                     item
-                    key={vets._id}
+                    key={rets._id}
                     component={Card}
                     xs={12}
                     s={6}
                     md={3}
                     className="vetATSCards"
-                    style={{ borderTop: "solid #8d54b5 15px" }}
+                    style={{ borderTop: "solid darkred 15px" }}
                   >
                     <CardContent>
-                      <Typography className="categoryTitle">
-                        VETERANS
+                      <Typography style={{ fontSize: ".85rem" }}>
+                        COMPANY NAME
                       </Typography>
-                      <Typography variant="h5" component="h3">
-                        {vets.lastName.toUpperCase()},{" "}
-                        {vets.firstName.toUpperCase()}
+                      {rets.coName.toUpperCase()}
+                      <hr></hr>
+                      <Typography style={{ fontSize: ".85rem" }}>
+                        CONTACT PERSON
                       </Typography>
-                      <Typography
-                        variant="body2"
-                        id="vetCardTime"
-                        component="p"
-                        style={{ marginTop: 8 }}
-                      >
-                        Email: {vets.email}
+                      {rets.retFirstName.toUpperCase()}{" "}
+                      {rets.retLastName.toUpperCase()}
+                      <br></br>
+                      {rets.retEmail}
+                      {rets.retPhoneNumber}
+                      <hr></hr>
+                      <Typography style={{ fontSize: ".85rem" }}>
+                        STATE(s) LICENSED IN:
+                        {rets.licState.map((states) => (
+                          <ul>
+                            <li>{states.value}</li>
+                          </ul>
+                        ))}
                       </Typography>
                       {/* <Typography variant="body2" component="p">
                       {vets.careerInterest}
                     </Typography> */}
-                      <Typography color="body2" id="vetCardTime" component="p">
-                        Date:{" "}
-                        <Moment format="MM/DD/YYYY, h:mm a">{vets.date}</Moment>
+                      <hr></hr>
+                      <Typography style={{ fontSize: ".85rem" }}>
+                        DATE OF SUBMISSION
                       </Typography>
-
+                      <Moment format="MM/DD/YYYY, h:mm a">{rets.date}</Moment>
                       {/* <button onClick={() => this.deleteNumber(vets._id)} /> */}
                     </CardContent>
                     <CardActions>
