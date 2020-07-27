@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
 import RetailerList from "../../components/retailers/RetailerATSList";
 
-const VeteranATS = () => {
+const RetailerATS = () => {
   return (
     <React.Fragment>
       <Layout>
@@ -54,4 +54,4 @@ const VeteranATS = () => {
   );
 };
 
-export default VeteranATS;
+export default RetailerATS;

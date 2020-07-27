@@ -35,7 +35,11 @@ const Index = () => {
             </a>
           </div>
           <div className="col-md-3 mb-2 col-middle">
-            <LandingCardsTwo />
+            <Link href="/retailers">
+              <a>
+                <LandingCardsTwo />
+              </a>
+            </Link>
           </div>
           <div className="col-md-3 mb-2 col-right">
             <LandingCardsThree />

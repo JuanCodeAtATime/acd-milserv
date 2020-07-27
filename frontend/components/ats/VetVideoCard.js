@@ -53,7 +53,7 @@ export default function VetVideoCard() {
           <CardMedia
             component="img"
             alt="Video for Veterans"
-            height="140"
+            height="240"
             image="../../static/images/vetvid.png"
             title="MilServe Video for Veterans"
           />

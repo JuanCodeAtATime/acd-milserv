@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 // import pic from "../../static/images/mildiscowl.png";
+import ReactPlayer from "react-player";
 
 const useStyles = makeStyles({
   root: {
@@ -27,13 +28,13 @@ export default function RetVideoCard() {
       <br></br>
       <Card className={classes.root}>
         <CardActionArea>
-          <CardMedia
+          {/* <CardMedia
             component="img"
             alt="Video for Veterans"
             height="240"
             image="../../static/images/retailervid2.png"
             title="MilServe Video for Veterans"
-          />
+          /> */}
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               SOLUTION FOR RETAILERS
@@ -45,9 +46,15 @@ export default function RetVideoCard() {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            PLAY
-          </Button>
+          <ReactPlayer
+            className="react-player"
+            style={{ padding: 0, margin: 0, height: "100%" }}
+            // url={retailerVid}
+            url={"../../static/videos/retailerExplainerVid.mp4"}
+            width="100%"
+            height="auto"
+            controls={true}
+          />
         </CardActions>
       </Card>
     </div>

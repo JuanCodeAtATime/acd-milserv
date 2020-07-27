@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 // import ReactPlayer from "react-player";
 import Layout from "../components/Layout";
 import RetSignUpForm from "../components/retailers/RetailerForm";
@@ -46,14 +46,17 @@ const Retailers = () => {
         <div className="row">
           <div
             className="col-md-6 aboutSections"
-            style={{ backgroundColor: "goldenrod", paddingTop: 50 }}
+            style={{ backgroundColor: "goldenrod", paddingTop: 20 }}
           >
             {/* <ReactPlayer
               className="react-player"
-              url={retailerVid}
+              style={{ padding: 0, margin: 0, height: "100%" }}
+              // url={retailerVid}
+              url={"../static/videos/retailerExplainerVid.mp4"}
               width="100%"
-              height="100%"
+              height="auto"
               controls={true}
+              light={true}
             /> */}
             <RetVideoCard />
           </div>
