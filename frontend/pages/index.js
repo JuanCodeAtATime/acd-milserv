@@ -36,9 +36,7 @@ const Index = () => {
           </div>
           <div className="col-md-3 mb-2 col-middle">
             <Link href="/retailers">
-              <a>
-                <LandingCardsTwo />
-              </a>
+              <LandingCardsTwo />
             </Link>
           </div>
           <div className="col-md-3 mb-2 col-right">
