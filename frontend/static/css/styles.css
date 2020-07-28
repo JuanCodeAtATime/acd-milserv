@@ -180,6 +180,16 @@ h2.about-header {
   padding-right: 0 !important;
 }
 
+/* Partner With Us Buttons on Landing Page */
+ul#horizontal-list {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 20;
+}
+ul#horizontal-list li {
+  display: inline;
+}
+
 /* div.navtoggler {
   z-index: 1000 !important;
 } */

@@ -28,7 +28,7 @@ export default function RetVideoCard() {
         <CardActionArea>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              SOLUTION FOR RETAILERS
+              WATCH VIDEO FOR RETAILERS
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Watch video to learn about our E-Commerce platform to order

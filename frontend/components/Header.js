@@ -67,12 +67,9 @@ const Header = (props) => {
                   <DropdownItem>DISTRIBUTORS</DropdownItem>
                 </Link>
                 <DropdownItem divider />
-                {/* {!isAuth() && (
-                  <Link href="/signin">
-                    <DropdownItem>Staff Portal</DropdownItem>
-                  </Link>
-                )} */}
-                <DropdownItem>PARTNER WITH US</DropdownItem>
+                <Link href="/index#partner">
+                  <DropdownItem>PARTNER WITH US</DropdownItem>
+                </Link>
               </DropdownMenu>
             </UncontrolledDropdown>
 
@@ -109,43 +106,6 @@ const Header = (props) => {
             <Link href="/about">
               <NavItem className="listItems">ABOUT</NavItem>
             </Link>
-
-            {/* {!isAuth() && (
-              <React.Fragment>
-                <NavItem>
-                  <Link href="/signin">
-                    <NavLink className="navItems">
-                      <button
-                        className="btn landingAuth"
-                        style={{
-                          backgroundColor: "transparent",
-                          border: "solid #5bc0de 1.6px",
-                        }}
-                      >
-                        {" "}
-                        sign-in
-                      </button>
-                    </NavLink>
-                  </Link>
-                </NavItem> */}
-            {/* <NavItem>
-                  <Link href="/signup">
-                    <NavLink className="navItems">
-                      <button
-                        className="btn landingAuth"
-                        style={{
-                          backgroundColor: "transparent",
-                          border: "solid #5bc0de 1.6px",
-                        }}
-                      >
-                        {" "}
-                        sign-up
-                      </button>
-                    </NavLink>
-                  </Link>
-                </NavItem>
-              </React.Fragment>
-            )} */}
 
             {isAuth() && isAuth().role === 0 && (
               <Link href="/user">

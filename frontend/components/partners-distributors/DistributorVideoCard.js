@@ -28,7 +28,7 @@ export default function DistVideoCard() {
         <CardActionArea>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              SOLUTION FOR DISTRIBUTORS
+              WATCH VIDEO FOR DISTRIBUTORS
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               From helping you save money to expanding your reach, press play to
