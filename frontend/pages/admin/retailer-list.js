@@ -3,7 +3,7 @@ import Admin from "../../components/auth/Admin";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-import RetailerList from "../../components/retailers/RetailerATSList";
+import RetailerList from "../../components/partners-retailers/RetailerATSList";
 
 const RetailerATS = () => {
   return (

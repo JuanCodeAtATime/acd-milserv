@@ -1,11 +1,12 @@
 import React from "react";
-// import ReactPlayer from "react-player";
 import Layout from "../components/Layout";
-import RetSignUpForm from "../components/retailers/RetailerForm";
-import RetVideoCard from "../components/retailers/RetailerVideoCard";
+import RetSignUpForm from "../components/partners-retailers/RetailerForm";
+import RetVideoCard from "../components/partners-retailers/RetailerVideoCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-// import retailerVid from "../static/videos/retailerExplainerVid.mp4";
+import {
+  faArrowAltCircleLeft,
+  faStoreAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Retailers = () => {
   return (
@@ -38,6 +39,19 @@ const Retailers = () => {
             <h2 className="landing-cta about-header" id="landing-cta">
               RETAILERS
             </h2>
+            <div style={{ display: "block" }}>
+              <FontAwesomeIcon
+                icon={faStoreAlt}
+                style={{
+                  fontSize: "8rem",
+                  marginTop: 20,
+                  color: "white",
+                  padding: 20,
+                  borderRadius: 10,
+                  backgroundColor: "rgba(0,0,0,0.5)",
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -48,16 +62,6 @@ const Retailers = () => {
             className="col-md-6 aboutSections"
             style={{ backgroundColor: "goldenrod", paddingTop: 20 }}
           >
-            {/* <ReactPlayer
-              className="react-player"
-              style={{ padding: 0, margin: 0, height: "100%" }}
-              // url={retailerVid}
-              url={"../static/videos/retailerExplainerVid.mp4"}
-              width="100%"
-              height="auto"
-              controls={true}
-              light={true}
-            /> */}
             <RetVideoCard />
           </div>
           <div

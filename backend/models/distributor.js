@@ -24,7 +24,7 @@ const distributorSchema = new mongoose.Schema({
     type: Array,
     required: true,
   },
-  disStateLicNo: {
+  distStateLicNo: {
     type: String,
     trim: true,
   },

@@ -45,7 +45,7 @@ export default function ManageCard() {
           <a href="/admin/retailer-list">Makers</a>
         </Button>
         <Button size="small" color="primary">
-          <a href="/admin/retailer-list">Distributors</a>
+          <a href="/admin/distributor-list">Distributors</a>
         </Button>
       </CardActions>
     </Card>

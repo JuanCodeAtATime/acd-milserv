@@ -3,7 +3,7 @@ import Admin from "../../components/auth/Admin";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-import VeteranList from "../../components/ats/VeteranATSList";
+import VeteranList from "../../components/partners-veterans/VeteranATSList";
 
 const VeteranATS = () => {
   return (

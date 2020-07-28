@@ -63,8 +63,9 @@ const Header = (props) => {
                 <Link href="/retailers">
                   <DropdownItem>RETAILERS</DropdownItem>
                 </Link>
-
-                <DropdownItem>DISTRIBUTORS</DropdownItem>
+                <Link href="/distributors">
+                  <DropdownItem>DISTRIBUTORS</DropdownItem>
+                </Link>
                 <DropdownItem divider />
                 {/* {!isAuth() && (
                   <Link href="/signin">

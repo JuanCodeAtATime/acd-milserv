@@ -479,21 +479,21 @@ input > form.vet-form {
 /* Veterans ATS Page */
 
 .vetATSCards {
-  margin: 0.5rem 0.25rem !important;
+  margin: 0.75rem 0.25rem !important;
   font-weight: bold !important;
   height: auto !important;
-  /* min-height: 165.9px !important; */
-  min-width: 285px !important;
-  /* min-width: 165.9px !important; */
+  width: auto !important;
   background-color: #ffffff !important;
   color: #383838;
   border-radius: 5px !important;
   position: relative;
   transition: all 0.2s ease-in-out !important;
+  opacity: 0.75;
 }
 
 .vetATSCards:hover {
-  transform: scale(1.03) !important;
+  transform: scale(1.01) !important;
+  opacity: 1;
 }
 
 #vetCardTime {

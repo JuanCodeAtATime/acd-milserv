@@ -1,8 +1,11 @@
 import Layout from "../components/Layout";
-import VetSignUpForm from "../components/ats/VetSignUpForm";
-import VetVideoCard from "../components/ats/VetVideoCard";
+import VetSignUpForm from "../components/partners-veterans/VetSignUpForm";
+import VetVideoCard from "../components/partners-veterans/VetVideoCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowAltCircleLeft,
+  faFlagUsa,
+} from "@fortawesome/free-solid-svg-icons";
 
 const VeteranJobs = () => {
   return (
@@ -35,6 +38,19 @@ const VeteranJobs = () => {
             <h2 className="landing-cta about-header" id="landing-cta">
               JOBS FOR VETERANS
             </h2>
+            <div style={{ display: "block" }}>
+              <FontAwesomeIcon
+                icon={faFlagUsa}
+                style={{
+                  fontSize: "8rem",
+                  marginTop: 20,
+                  color: "white",
+                  padding: 20,
+                  borderRadius: 10,
+                  backgroundColor: "rgba(0,0,0,0.5)",
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
