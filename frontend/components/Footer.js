@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="col-md-3 pb-2">
               <h3 className="title">MILSERV</h3>
               <p>
-                Copyright <span>&copy;</span> MILSERV 2020{" "}
+                Copyright <span>&copy;</span> ACD MILSERV 2020{" "}
               </p>
               {!isAuth() && (
                 <Link href="/signin">
@@ -20,23 +20,43 @@ const Footer = () => {
                 </Link>
               )}
             </div>
-            <div className="col-md-3 pb-2">
+            <div className="col-md-3 pb-2" id="footer-links">
               <h6 className="title">PARTNERS</h6>
-              <p className="footer-items">MAKERS</p>
-              <p className="footer-items">RETAILERS</p>
-              <p className="footer-items">DISTRIBUTORS</p>
+              <p className="footer-items">
+                <a href="#">MAKERS</a>
+              </p>
+              <p className="footer-items">
+                <a href="/retailers">RETAILERS</a>
+              </p>
+              <p className="footer-items">
+                <a href="/distributors">DISTRIBUTORS</a>
+              </p>
             </div>
-            <div className="col-md-3 pb-2">
+            <div className="col-md-3 pb-2" id="footer-links">
               <h6 className="title">VETERANS</h6>
-              <p className="footer-items">JOBS</p>
-              <p className="footer-items">SKILLBRIDGE</p>
-              <p className="footer-items">GIVING BACK</p>
+              <p className="footer-items">
+                <a href="/veteran-jobs">JOBS</a>
+              </p>
+              <p className="footer-items">
+                <a href="#">SKILLBRIDGE</a>
+              </p>
+              <p className="footer-items">
+                {" "}
+                <a href="#">GIVING BACK</a>
+              </p>
             </div>
-            <div className="col-md-3 pb-2">
+            <div className="col-md-3 pb-2" id="footer-links">
               <h6 className="title">NEWS</h6>
-              <p className="footer-items">BLOG</p>
-              <p className="footer-items">PRESS RELEASES</p>
-              <p className="footer-items">STAY CONNECTED</p>
+              <p className="footer-items">
+                <a href="/blogs">BLOG</a>
+              </p>
+              <p className="footer-items">
+                {" "}
+                <a href="#">PRESS RELEASES</a>{" "}
+              </p>
+              <p className="footer-items">
+                <a href="#">STAY CONNECTED</a>{" "}
+              </p>
             </div>
           </div>
         </div>

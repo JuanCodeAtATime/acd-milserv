@@ -58,7 +58,7 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
   const showAllCategories = () => {
     return categories.map((c, i) => (
       <Link href={`/categories/${c.slug}`} key={i}>
-        <a className="btn btn-info mr-1 ml-1 mt-3">{c.name}</a>
+        <a className="btn btn-outline-warning mr-1 ml-1 mt-3">{c.name}</a>
       </Link>
     ));
   };
@@ -66,7 +66,7 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
   const showAllTags = () => {
     return tags.map((t, i) => (
       <Link href={`/tags/${t.slug}`} key={i}>
-        <a className="btn btn-outline-info mr-1 ml-1 mt-3">{t.name}</a>
+        <a className="btn btn-outline-danger mr-1 ml-1 mt-3">{t.name}</a>
       </Link>
     ));
   };
@@ -82,17 +82,26 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
                 <h3 className="display-4 text-center">MILSERV NEWS</h3>
               </div>
               <section>
-                <div className="pb-5 text-center">
-                  {showAllCategories()}
-                  {showAllTags()}
-                  <hr />
-                </div>
+                <div className="pb-5 text-center"></div>
               </section>
             </header>
           </div>
           <div className="container-fluid">
             <div className="row pl-3">
-              <div className="col-md-12">{showAllBlogs()}</div>
+              <div
+                className="col-md-9"
+                style={{ borderRight: "solid lightgray 1px" }}
+              >
+                {showAllBlogs()}
+              </div>
+              <div className="col-md-3" top="sticky">
+                <h3 style={{ fontWeight: "400" }}>categories</h3>
+                {showAllCategories()}
+                <hr></hr>
+                <h3 style={{ fontWeight: "400" }}>tags</h3>
+                {showAllTags()}
+                <hr />
+              </div>
             </div>
           </div>
         </main>

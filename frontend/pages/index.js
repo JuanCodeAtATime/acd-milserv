@@ -30,12 +30,18 @@ const Index = () => {
           </h2>
         </div>
         <div className="row pl-3 pr-3">
-          <div className="col-md-4 mb-2 col-left">
+          <div className="col-md-3 col-left">
             <img
               className="text-center"
               src={"../static/images/owllogo.jpg"}
-              width="100%"
-              height="100%"
+              width="80%"
+              height="80%"
+              style={{
+                position: "absolute",
+                top: "50%",
+                msTransform: "translateX(-50%)",
+                transform: "translateY(-50%)",
+              }}
             ></img>
           </div>
           <div
@@ -46,7 +52,7 @@ const Index = () => {
             }}
           >
             <h2>MilServ Supports Those Who Serve</h2>
-            <p style={{ fontSize: "1.65rem" }}>
+            <p style={{ fontSize: "1.35rem" }}>
               Our mission is to use the delivery of alcohol products in the US
               to create business opportunities, jobs, and distributable benefits
               for veterans, their families, and the non-government organizations
@@ -96,13 +102,13 @@ const Index = () => {
               padding: 30,
             }}
           >
-            <p style={{ fontSize: "1.65rem" }}>
+            <p style={{ fontSize: "1.35rem" }}>
               Through a commitment to employ, contract, and benefit military
               service-members and their families, MilServ ACD adds value to the
               craft community while sharing the rewards with local
               service-members in need.
             </p>
-            <p style={{ fontSize: "1.65rem" }}>
+            <p style={{ fontSize: "1.35rem" }}>
               Partner with us today! Learn more by clicking on your partner
               category below.
             </p>

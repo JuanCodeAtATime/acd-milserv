@@ -7,14 +7,14 @@ const Card = ({ blog }) => {
   const showBlogCategories = (blog) =>
     blog.categories.map((c, i) => (
       <Link key={i} href={`/categories/${c.slug}`}>
-        <a className="btn btn-info mr-1 mt-3">{c.name}</a>
+        <a className="btn btn-outline-warning mr-1 mt-3">{c.name}</a>
       </Link>
     ));
 
   const showBlogTags = (blog) =>
     blog.tags.map((t, i) => (
       <Link key={i} href={`/tags/${t.slug}`}>
-        <a className="btn btn-outline-info mr-1 ml-1 mt-3">{t.name}</a>
+        <a className="btn btn-outline-danger mr-1 ml-1 mt-3">{t.name}</a>
       </Link>
     ));
 

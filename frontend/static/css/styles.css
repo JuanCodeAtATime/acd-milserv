@@ -447,6 +447,12 @@ a.footer-links:link {
   font-weight: 400;
 }
 
+#footer-links a {
+  text-decoration: none !important;
+  color: inherit;
+  font-weight: 300;
+}
+
 p.staff-signin {
   font-size: 0.85rem;
   color: blue;

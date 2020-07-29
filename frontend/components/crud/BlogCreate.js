@@ -100,7 +100,7 @@ const CreateBlog = ({ router }) => {
   };
 
   const handleChange = (name) => (e) => {
-    // console.log(e.target.value);
+    console.log(e.target.value);
     const value = name === "photo" ? e.target.files[0] : e.target.value;
     formData.set(name, value);
     setValues({ ...values, [name]: value, formData, error: "" });
@@ -182,7 +182,11 @@ const CreateBlog = ({ router }) => {
   const showError = () => (
     <div
       className="alert alert-danger"
-      style={{ display: error ? "" : "none" }}
+      style={{
+        zIndex: "3",
+        position: "absolute",
+        display: error ? "" : "none",
+      }}
     >
       {error}
     </div>
@@ -191,7 +195,11 @@ const CreateBlog = ({ router }) => {
   const showSuccess = () => (
     <div
       className="alert alert-success"
-      style={{ display: success ? "" : "none" }}
+      style={{
+        zIndex: "3",
+        position: "absolute",
+        display: success ? "" : "none",
+      }}
     >
       {success}
     </div>
@@ -221,7 +229,7 @@ const CreateBlog = ({ router }) => {
         </div>
 
         <div>
-          <button type="submit" className="authBtns">
+          <button type="submit" className="btn btn-warning">
             Publish
           </button>
         </div>
@@ -242,7 +250,7 @@ const CreateBlog = ({ router }) => {
             <h5>Featured Image</h5>
             <hr />
             <small className="text-muted">Max size: 1mb </small>
-            <label className="btn btn-outline-info">
+            <label className="btn btn-outline-warning">
               Upload featured image
               <input
                 onChange={handleChange("photo")}
