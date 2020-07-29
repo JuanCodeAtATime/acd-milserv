@@ -175,7 +175,7 @@ exports.listAllBlogsCategoriesTags = (req, res) => {
 
 exports.read = (req, res) => {
   const slug = req.params.slug.toLowerCase();
-  Blogs.findOne({ slug })
+  Blog.findOne({ slug })
     .populate("categories", "_id name slug")
     .populate("tags", "_id name slug")
     .populate("postedBy", "_id name username")

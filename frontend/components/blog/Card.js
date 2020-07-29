@@ -7,14 +7,14 @@ const Card = ({ blog }) => {
   const showBlogCategories = (blog) =>
     blog.categories.map((c, i) => (
       <Link key={i} href={`/categories/${c.slug}`}>
-        <a className="btn btn-outline-warning mr-1 mt-3">{c.name}</a>
+        <a className="btn btn-outline-info btn-sm mr-1 mt-3">{c.name}</a>
       </Link>
     ));
 
   const showBlogTags = (blog) =>
     blog.tags.map((t, i) => (
       <Link key={i} href={`/tags/${t.slug}`}>
-        <a className="btn btn-outline-danger mr-1 ml-1 mt-3">{t.name}</a>
+        <a className="btn btn-outline-danger btn-sm mr-1 ml-1 mt-3">{t.name}</a>
       </Link>
     ));
 
@@ -47,9 +47,14 @@ const Card = ({ blog }) => {
               </section>
             </header>
             <div className="excerpt">{renderHTML(blog.excerpt)}</div>
-            {/* <Link href={`/blogs/${blog.slug}`}>
-              <a className="btn btn-info pt-1 pb-1 mb-1">Read more</a>
-            </Link> */}
+            <Link href={`/blogs/${blog.slug}`}>
+              <a
+                className="btn btn-light pt-1 pb-1 mb-1"
+                style={{ fontSize: ".65rem", fontWeight: "600" }}
+              >
+                Read more
+              </a>
+            </Link>
           </section>
           <div className="row pl-3 pb-3 text-center">
             <br />

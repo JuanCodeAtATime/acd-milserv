@@ -7,7 +7,15 @@ import { listBlogsWithCategoriesAndTags } from "../../actions/blog";
 import Card from "../../components/blog/Card";
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from "../../config";
 
-const Blogs = ({ blogs, categories, tags, size, router }) => {
+const Blogs = ({
+  blogs,
+  categories,
+  tags,
+  totalBlogs,
+  blogsLimit,
+  blogSkip,
+  router,
+}) => {
   const head = () => (
     <Head>
       <title> Programming Blogs | {APP_NAME} </title>
@@ -44,6 +52,35 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
     </Head>
   );
 
+  const [limit, setLimit] = useState(blogsLimit);
+  const [skip, setSkip] = useState(blogSkip);
+  const [size, setSize] = useState(totalBlogs);
+  const [loadedBlogs, setLoadedBlogs] = useState([]);
+
+  const loadMore = () => {
+    let toSkip = skip + limit;
+    listBlogsWithCategoriesAndTags(toSkip, limit).then((data) => {
+      if (data.error) {
+        console.log(data.error);
+      } else {
+        setLoadedBlogs([...loadedBlogs, ...data.blogs]);
+        setSize(data.size);
+        setSkip(toSkip);
+      }
+    });
+  };
+
+  const loadMoreButton = () => {
+    return (
+      size > 0 &&
+      size >= limit && (
+        <button onClick={loadMore} className="btn btn-outline-dark btn-sm">
+          Load more
+        </button>
+      )
+    );
+  };
+
   const showAllBlogs = () => {
     return blogs.map((blog, i) => {
       return (
@@ -58,7 +95,7 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
   const showAllCategories = () => {
     return categories.map((c, i) => (
       <Link href={`/categories/${c.slug}`} key={i}>
-        <a className="btn btn-outline-warning mr-1 ml-1 mt-3">{c.name}</a>
+        <a className="btn btn-outline-info btn-sm mr-1 ml-1 mt-3">{c.name}</a>
       </Link>
     ));
   };
@@ -66,8 +103,16 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
   const showAllTags = () => {
     return tags.map((t, i) => (
       <Link href={`/tags/${t.slug}`} key={i}>
-        <a className="btn btn-outline-danger mr-1 ml-1 mt-3">{t.name}</a>
+        <a className="btn btn-outline-danger btn-sm mr-1 ml-1 mt-3">{t.name}</a>
       </Link>
+    ));
+  };
+
+  const showLoadedBlogs = () => {
+    return loadedBlogs.map((blog, i) => (
+      <article key={i}>
+        <Card blog={blog} />
+      </article>
     ));
   };
 
@@ -81,26 +126,44 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
               <div className="col-md-12 pt-3 mt-4">
                 <h3 className="display-4 text-center">MILSERV NEWS</h3>
               </div>
-              <section>
-                <div className="pb-5 text-center"></div>
-              </section>
             </header>
           </div>
           <div className="container-fluid">
+            <div
+              className="row text-center mt-2 mb-1"
+              style={{ paddingTop: "45px", paddingBottom: "90px" }}
+            >
+              <div className="col-md-6 pb-3">
+                <h5 style={{ fontWeight: "400", marginBottom: "0px" }}>
+                  categories
+                </h5>
+                {showAllCategories()}
+              </div>
+
+              <div className="col-md-6">
+                <h5 style={{ fontWeight: "400", marginBottom: "0px" }}>tags</h5>
+                {showAllTags()}
+              </div>
+            </div>
+
             <div className="row pl-3">
               <div
-                className="col-md-9"
+                className="col-md-12"
                 style={{ borderRight: "solid lightgray 1px" }}
               >
                 {showAllBlogs()}
               </div>
-              <div className="col-md-3" top="sticky">
-                <h3 style={{ fontWeight: "400" }}>categories</h3>
-                {showAllCategories()}
-                <hr></hr>
-                <h3 style={{ fontWeight: "400" }}>tags</h3>
-                {showAllTags()}
-                <hr />
+              <div
+                className="col-md-12"
+                style={{ borderRight: "solid lightgray 1px" }}
+              >
+                {showLoadedBlogs()}
+              </div>
+              <div
+                className="col-md-12 pb-5"
+                style={{ borderRight: "solid lightgray 1px" }}
+              >
+                {loadMoreButton()}
               </div>
             </div>
           </div>
@@ -111,7 +174,10 @@ const Blogs = ({ blogs, categories, tags, size, router }) => {
 };
 
 Blogs.getInitialProps = () => {
-  return listBlogsWithCategoriesAndTags().then((data) => {
+  let skip = 0;
+  let limit = 2;
+
+  return listBlogsWithCategoriesAndTags(skip, limit).then((data) => {
     if (data.error) {
       console.log(data.error);
     } else {
@@ -119,7 +185,9 @@ Blogs.getInitialProps = () => {
         blogs: data.blogs,
         categories: data.categories,
         tags: data.tags,
-        size: data.size,
+        totalBlogs: data.size,
+        blogsLimit: limit,
+        blogSkip: skip,
       };
     }
   });
