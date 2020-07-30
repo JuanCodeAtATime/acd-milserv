@@ -28,9 +28,9 @@ exports.create = (req, res) => {
       });
     }
 
-    if (!body || body.length < 200) {
+    if (!body || body.length < 50) {
       return res.status(400).json({
-        error: "Please add more content (200 character min.)",
+        error: "Please add more content (50 character min.)",
       });
     }
 
@@ -281,5 +281,23 @@ exports.photo = (req, res) => {
       }
       res.set("Content-Type", blog.photo.contentType);
       return res.send(blog.photo.data);
+    });
+};
+
+exports.listRelated = (req, res) => {
+  let limit = req.body.limit ? parseInt(req.body.limit) : 3;
+  const { _id, categories } = req.body.blog;
+
+  Blog.find({ _id: { $ne: _id }, categories: { $in: categories } })
+    .limit(limit)
+    .populate("postedBy", "_id name profile")
+    .select("title slug excerpt postedBy createdAt updatedAt")
+    .exec((err, blogs) => {
+      if (err) {
+        return res.status(400).json({
+          error: "No Related Articles Found",
+        });
+      }
+      res.json(blogs);
     });
 };
