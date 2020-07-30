@@ -540,3 +540,11 @@ input.formStyles {
   --rmsc-radius: 4px; /* Radius */
   --rmsc-h: 38px; /* Height */
 }
+
+/* Single Blog page */
+
+.featured-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}

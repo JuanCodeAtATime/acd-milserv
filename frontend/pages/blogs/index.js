@@ -18,7 +18,7 @@ const Blogs = ({
 }) => {
   const head = () => (
     <Head>
-      <title> Programming Blogs | {APP_NAME} </title>
+      <title> MilServ News | {APP_NAME} </title>
       <meta
         name="description"
         content="Blogs for connecting, networking, and learning code"

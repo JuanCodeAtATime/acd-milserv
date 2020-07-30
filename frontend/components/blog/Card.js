@@ -36,11 +36,11 @@ const Card = ({ blog }) => {
             <header>
               <Link href={`/blogs/${blog.slug}`}>
                 <a>
-                  <h2 className="font-weight-bold text-dark">{blog.title}</h2>
+                  <h2 className="text-dark">{blog.title}</h2>
                 </a>
               </Link>
               <section>
-                <p className="pb-2 mark pl-2">
+                <p className="pb-2 pl-2" style={{ backgroundColor: "#f7f7f7" }}>
                   Written by {blog.postedBy.name} | Published{" "}
                   {moment(blog.updatedAt).fromNow()}
                 </p>
