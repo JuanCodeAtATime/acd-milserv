@@ -59,7 +59,7 @@ const VeteranJobs = () => {
         <div className="row">
           <div
             className="col-md-6 aboutSections"
-            style={{ backgroundColor: "goldenrod", paddingTop: 50 }}
+            style={{ backgroundColor: "#bb6125", paddingTop: 50 }}
           >
             <VetVideoCard />
           </div>

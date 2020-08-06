@@ -60,7 +60,7 @@ const Retailers = () => {
         <div className="row">
           <div
             className="col-md-6 aboutSections"
-            style={{ backgroundColor: "goldenrod", paddingTop: 20 }}
+            style={{ backgroundColor: "#bb6125", paddingTop: 20 }}
           >
             <RetVideoCard />
           </div>

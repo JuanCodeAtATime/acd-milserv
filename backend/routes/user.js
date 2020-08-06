@@ -1,9 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const { requireSignin, authMiddleware, adminMiddleware } = require('../controllers/auth');
-const { read } = require('../controllers/user')
+const {
+  requireSignin,
+  authMiddleware,
+  adminMiddleware,
+} = require("../controllers/auth");
+const { read } = require("../controllers/user");
 
-router.get('/profile', requireSignin, authMiddleware, read);
-
+router.get("/profile", requireSignin, authMiddleware, read);
 
 module.exports = router;

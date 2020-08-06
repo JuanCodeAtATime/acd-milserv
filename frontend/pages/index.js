@@ -47,7 +47,7 @@ const Index = () => {
           <div
             className="col-md-8 mb-2 aboutSections"
             style={{
-              backgroundColor: "goldenrod",
+              backgroundColor: "#8d54b5",
               padding: 30,
             }}
           >
@@ -98,7 +98,7 @@ const Index = () => {
           <div
             className="col-md-8 mb-2 aboutSections"
             style={{
-              backgroundColor: "goldenrod",
+              backgroundColor: "#8d54b5",
               padding: 30,
             }}
           >

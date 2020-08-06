@@ -45,9 +45,14 @@ export default function BlogCard() {
             Write
           </Button>
         </a>
+        <a href="/admin/blogs">
+          <Button size="small" color="primary">
+            Update
+          </Button>
+        </a>
         <a href="/admin/crud/category-tag">
           <Button size="small" color="primary">
-            Create Categories
+            Create
           </Button>
         </a>
       </CardActions>

@@ -1,11 +1,22 @@
 //npm dependencies
+// console.log(require("dotenv").config());
+require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
-require("dotenv").config();
+const allowCrossDomain = (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.header("Access-Control-Allow-Headers", "*");
+  if (req.method === "OPTIONS") {
+    res.send(200);
+  } else {
+    next();
+  }
+};
 
 //bring routes
 const blogRoutes = require("./routes/blog");
@@ -34,6 +45,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cookieParser());
 //cors
+app.use(allowCrossDomain);
 if (process.env.NODE_ENV == "development") {
   app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
 }

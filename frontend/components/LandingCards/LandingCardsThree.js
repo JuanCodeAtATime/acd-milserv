@@ -30,6 +30,7 @@ export default function LandingCardsOne() {
       md={3}
       className="card"
       id="distributors-color"
+      style={{ backgroundColor: "#bb6125" }}
     >
       <CardContent>
         <CardMedia title="Distributors Card">
