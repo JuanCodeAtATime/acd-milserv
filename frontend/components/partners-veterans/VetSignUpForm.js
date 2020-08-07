@@ -18,6 +18,58 @@ const Interest = [
   { key: 4, value: "News/Update" },
 ];
 
+const stateOptions = [
+  { key: 1, value: "AL" },
+  { key: 2, value: "AK" },
+  { key: 3, value: "AZ" },
+  { key: 4, value: "AR" },
+  { key: 5, value: "CO" },
+  { key: 6, value: "CT" },
+  { key: 7, value: "DE" },
+  { key: 8, value: "FL" },
+  { key: 9, value: "GA" },
+  { key: 10, value: "HI" },
+  { key: 11, value: "ID" },
+  { key: 12, value: "IL" },
+  { key: 13, value: "IN" },
+  { key: 14, value: "IA" },
+  { key: 15, value: "KS" },
+  { key: 16, value: "KY" },
+  { key: 17, value: "LA" },
+  { key: 18, value: "ME" },
+  { key: 19, value: "MD" },
+  { key: 20, value: "MA" },
+  { key: 21, value: "MI" },
+  { key: 22, value: "MN" },
+  { key: 23, value: "MS" },
+  { key: 24, value: "MO" },
+  { key: 25, value: "MT" },
+  { key: 26, value: "NE" },
+  { key: 27, value: "NV" },
+  { key: 28, value: "NH" },
+  { key: 29, value: "NJ" },
+  { key: 30, value: "NM" },
+  { key: 31, value: "NY" },
+  { key: 32, value: "NC" },
+  { key: 33, value: "ND" },
+  { key: 34, value: "OH" },
+  { key: 35, value: "OK" },
+  { key: 36, value: "OR" },
+  { key: 37, value: "PA" },
+  { key: 38, value: "PR" },
+  { key: 39, value: "RI" },
+  { key: 40, value: "SC" },
+  { key: 41, value: "SD" },
+  { key: 42, value: "TN" },
+  { key: 43, value: "TX" },
+  { key: 44, value: "UT" },
+  { key: 45, value: "VT" },
+  { key: 46, value: "WA" },
+  { key: 47, value: "WV" },
+  { key: 48, value: "WI" },
+  { key: 49, value: "WY" },
+];
+
 const useStyles = makeStyles({
   root: {
     width: "auto",
@@ -137,7 +189,7 @@ export default function VetSignUpForm(props) {
             }}
             value={currentLocation}
             onChange={(e) => setCurrentLocation(e.target.value)}
-            placeholder="Current Location or Duty Station"
+            placeholder="Current Home/Duty Station State"
             type="text"
             name="currentLocation"
             required

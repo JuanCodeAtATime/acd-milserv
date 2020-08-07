@@ -32,7 +32,7 @@ const About = () => {
 
         <div
           className="row"
-          style={{ height: "350px", paddingTop: "30px", paddingLeft: "60px" }}
+          style={{ height: "50px", paddingTop: "30px", paddingLeft: "60px" }}
         >
           <div className="col-md-3">
             <h2 className="landing-cta about-header" id="landing-cta">
@@ -43,14 +43,22 @@ const About = () => {
       </section>
       <section>
         {" "}
-        <div className="row staff-portal-row text-center justify-content-center">
-          <div className="col-md-3 mt-3 mb-1">
-            <h2 style={{ fontWeight: "600", color: "#383838" }}>OUR TEAM</h2>
+        <div className="row text-center justify-content-center mb-3">
+          <div className="col-md-3 mt-3">
+            <h2 className="program">
+              <b style={{ color: "#383838" }}>OUR TEAM</b>
+            </h2>
           </div>
         </div>
         <div className="row mb-3 ml-3">
-          <div className="col-md-2 mt-3 mb-2">PHOTO</div>
-          <div className="col-md-10 mt-3 mb-2">
+          <div className="col-md-2 mt-4 mb-2">
+            <img
+              className="text-center"
+              src={"../static/images/jeff.jpg"}
+              width="100%"
+            ></img>
+          </div>
+          <div className="col-md-10 mt-3 mb-2" style={{ fontSize: "1.15rem" }}>
             <h2>Jeff Slater</h2>
             <p>
               {" "}
@@ -78,18 +86,40 @@ const About = () => {
               Jeff started his career with DataGeneral (now part of Dell
               Technologies) and has consulted with numerous software companies.
             </p>{" "}
-            <b></b>
-            Jeff is focusing his social responsibility time finding ways to give
-            back to our veteran heroes and their families and as a board member
-            for the upcoming commemoration of the 400 th anniversary of the
-            landing of the Mayflower and the formation of Plymouth Colony
-            (Massachusetts) in 2020. <br></br>Jeff was born in the Hudson Valley
-            of NY and lives in coastal Massachusetts with his wife and dog.
+            <p>
+              {" "}
+              Jeff is focusing his social responsibility time finding ways to
+              give back to our veteran heroes and their families and as a board
+              member for the upcoming commemoration of the 400 th anniversary of
+              the landing of the Mayflower and the formation of Plymouth Colony
+              (Massachusetts) in 2020. <br></br>Jeff was born in the Hudson
+              Valley of NY and lives in coastal Massachusetts with his wife and
+              dog.
+            </p>
+            <div style={{ cursor: "pointer" }}>
+              <a>
+                <b style={{ fontSize: "0.85rem" }}>Connect with Jeff</b>{" "}
+                <img
+                  className="text-center"
+                  src={"../static/images/li.png"}
+                  width="2.3%"
+                  style={{ borderRadius: 4 }}
+                ></img>
+              </a>
+            </div>
           </div>
         </div>
+        <hr></hr>
         <div className="row mb-3 ml-3">
-          <div className="col-md-2 mt-3 mb-2">PHOTO</div>
-          <div className="col-md-10 mt-3 mb-2">
+          <div className="col-md-2 mt-4 mb-2">
+            {" "}
+            <img
+              className="text-center"
+              src={"../static/images/david.jpg"}
+              width="100%"
+            ></img>
+          </div>
+          <div className="col-md-10 mt-3 mb-2" style={{ fontSize: "1.15rem" }}>
             <h2>David Jones</h2>
             <p>
               {" "}
@@ -117,21 +147,42 @@ const About = () => {
               Jeff started his career with DataGeneral (now part of Dell
               Technologies) and has consulted with numerous software companies.
             </p>{" "}
-            <b></b>
-            Jeff is focusing his social responsibility time finding ways to give
-            back to our veteran heroes and their families and as a board member
-            for the upcoming commemoration of the 400 th anniversary of the
-            landing of the Mayflower and the formation of Plymouth Colony
-            (Massachusetts) in 2020. <br></br>Jeff was born in the Hudson Valley
-            of NY and lives in coastal Massachusetts with his wife and dog.
+            <p>
+              Jeff is focusing his social responsibility time finding ways to
+              give back to our veteran heroes and their families and as a board
+              member for the upcoming commemoration of the 400 th anniversary of
+              the landing of the Mayflower and the formation of Plymouth Colony
+              (Massachusetts) in 2020. <br></br>Jeff was born in the Hudson
+              Valley of NY and lives in coastal Massachusetts with his wife and
+              dog.
+            </p>
+            <div style={{ cursor: "pointer" }}>
+              <a>
+                <b style={{ fontSize: "0.85rem" }}>Connect with Jeff</b>{" "}
+                <img
+                  className="text-center"
+                  src={"../static/images/li.png"}
+                  width="2.3%"
+                  style={{ borderRadius: 4 }}
+                ></img>
+              </a>
+            </div>
           </div>
         </div>
-        <div className="row staff-portal-row text-center justify-content-center">
+        <div
+          className="row text-center justify-content-center"
+          style={{ backgroundColor: "#ffc107", paddingTop: 25 }}
+        >
           <div className="col-md-3 mt-3 mb-2">
-            <h2 style={{ fontWeight: "600", color: "#383838" }}>
-              OUR SERVICES
+            <h2 className="program">
+              <b style={{ color: "#383838" }}>OUR SERVICES</b>
             </h2>
           </div>
+        </div>
+        <div
+          className="row text-center justify-content-center"
+          style={{ backgroundColor: "#ffc107", paddingBottom: 40 }}
+        >
           <div className="col-md-3 staff-portal-cols mb-3">
             <Dir2Consumer />
           </div>
@@ -144,39 +195,54 @@ const About = () => {
             <VetTraining />
           </div>
         </div>
-        <div className="row text-center">
-          <div
-            className="col-md-6 aboutSections"
-            style={{ backgroundColor: "darkblue" }}
-          >
-            <h3>WHO?</h3>
-            <p>
-              We are current and former military member veterans and their
-              families. Our lives and business are built on a foundation of
-              service and devotion to a greater good. American Craft Deliveries
-              (ACD) MilServe has a mission to ensure every artisan beverage
-              maker is provided frontline support for their success. We do this
-              on the field, ensuring it’s leveled, for each craft beer, wine,
-              and spirit to reach their ever-growing, selective target market
-              fresh for the enjoyment of all.
-            </p>
+        <div
+          className="row text-center justify-content-center"
+          style={{ paddingTop: 25 }}
+        >
+          <div className="col-md-3 mt-3 mb-2">
+            <h2 className="program">
+              <b style={{ color: "#383838" }}>OUR MISSION</b>
+            </h2>
           </div>
+        </div>
+        <div className="row">
           <div
-            className="col-md-6 aboutSections"
-            style={{ backgroundColor: "darkred" }}
+            className="col-md-12 aboutSections"
+            style={{ fontSize: "1.15rem", color: "#383838" }}
           >
-            <h3>WHAT?</h3>
             <p>
-              ACD MilServe allows small and large brewers alike the ability to
-              get their product to a market that is under served. This way they
-              can focus on what they do best, make innovative beers for
-              passionate beer enthusiasts. No need to created a complicated
-              logistics infrastructure, just place your beverage on our
-              partner's (ACB) online market platform and let the orders start
-              rolling in while we take care of all the deliveries.
+              We are current and former military veterans and their families.
+              Our lives and business are built on a foundation of service and
+              devotion to a greater good.
             </p>
+            <p>
+              American Craft Deliveries (ACD) MilServ has a mission to ensure
+              every artisan beverage maker is provided frontline support for
+              their success. We do this on the field, ensuring it’s leveled, for
+              each craft beer, wine, and spirit to reach their ever-growing,
+              selective target market fresh for the enjoyment of all.
+            </p>
+
+            <p>
+              {" "}
+              We allow small and large brewers alike the ability to get their
+              product to a market that is under served. This way they can focus
+              on what they do best, make innovative beers for passionate beer
+              enthusiasts.
+            </p>
+            <p>
+              {" "}
+              No need to created a complicated logistics infrastructure, just
+              place your beverage on our partner's (ACB) online market platform
+              and let the orders start rolling in while we take care of all the
+              deliveries.
+            </p>
+            <br></br>
+            <button className="about-where-btn mb-5">
+              Check if we're in your neck of the woods!
+            </button>
           </div>
-          <div
+          {/* <div
             className="col-md-6 aboutSections"
             style={{ backgroundColor: "#b19cd9" }}
           >
@@ -190,8 +256,8 @@ const About = () => {
               America's Finest, Veterans and their spouses, we work to ensure
               just-in-time supply of manufacturers' products in the market.
             </p>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className="col-md-6 aboutSections"
             style={{ backgroundColor: "goldenrod" }}
           >
@@ -201,12 +267,10 @@ const About = () => {
               We started in the quiet towns on Cape Cod MA, but now service all
               of New England and as far as Texas. We plan to be in every state
               within the next 5 years.
-            </p>
-            <button className="about-where-btn">
-              Check if we're in your neck of the woods!
-            </button>
-          </div>
-          <div
+            </p> */}
+
+          {/* </div> */}
+          {/* <div
             className="col-md-12 aboutSections"
             style={{
               backgroundColor: "#228b22",
@@ -226,7 +290,7 @@ const About = () => {
               community, improving the environment, and enhancing the lives of
               military veterans and their families.
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
     </Layout>

@@ -39,7 +39,7 @@ const Retailers = () => {
             <h2 className="landing-cta about-header" id="landing-cta">
               RETAILERS
             </h2>
-            <div style={{ display: "block" }}>
+            {/* <div style={{ display: "block" }}>
               <FontAwesomeIcon
                 icon={faStoreAlt}
                 style={{
@@ -51,7 +51,7 @@ const Retailers = () => {
                   backgroundColor: "rgba(0,0,0,0.5)",
                 }}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -21,7 +21,15 @@ export default function Dir2Consumer() {
 
   return (
     // <Link to="/" style={{ textDecoration: "none" }}>
-    <Grid item component={Card} xs={12} s={6} md={3} className="card">
+    <Grid
+      item
+      component={Card}
+      xs={12}
+      s={6}
+      md={3}
+      className="card"
+      style={{ position: "relative", opacity: 1 }}
+    >
       <CardContent>
         <CardMedia title="Direct to Consumer">
           <PeopleIcon style={{ fontSize: 100, color: "#383838" }} />

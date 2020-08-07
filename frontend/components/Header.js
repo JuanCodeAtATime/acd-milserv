@@ -92,9 +92,9 @@ const Header = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <Link href="/blogs">
-                  <DropdownItem>BLOG</DropdownItem>
+                  <DropdownItem>MILSERV MEDIA</DropdownItem>
                 </Link>
-                <DropdownItem>PRESS RELEASES</DropdownItem>
+                {/* <DropdownItem>PRESS RELEASES</DropdownItem> */}
                 <DropdownItem>STAY CONNECTED</DropdownItem>
                 {/* <DropdownItem divider />
                 <DropdownItem>Partner with us</DropdownItem> */}

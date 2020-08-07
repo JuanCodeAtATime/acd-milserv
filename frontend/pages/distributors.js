@@ -39,19 +39,6 @@ const Distributors = () => {
             <h2 className="landing-cta about-header" id="landing-cta">
               DISTRIBUTORS
             </h2>
-            <div style={{ display: "block" }}>
-              <FontAwesomeIcon
-                icon={faTruck}
-                style={{
-                  fontSize: "8rem",
-                  marginTop: 20,
-                  color: "white",
-                  padding: 20,
-                  borderRadius: 10,
-                  backgroundColor: "rgba(0,0,0,0.5)",
-                }}
-              />
-            </div>
           </div>
         </div>
       </section>

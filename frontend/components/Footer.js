@@ -1,7 +1,6 @@
 import React from "react";
 import { isAuth } from "../actions/auth";
 import Link from "next/link";
-// import { NavItem } from "reactstrap";
 
 const Footer = () => {
   return (
@@ -32,7 +31,7 @@ const Footer = () => {
                 <a href="/distributors">DISTRIBUTORS</a>
               </p>
             </div>
-            <div className="col-md-3 pb-2" id="footer-links">
+            <div className="col-md-2 pb-2" id="footer-links">
               <h6 className="title">VETERANS</h6>
               <p className="footer-items">
                 <a href="/veteran-jobs">JOBS</a>
@@ -45,7 +44,7 @@ const Footer = () => {
                 <a href="#">GIVING BACK</a>
               </p>
             </div>
-            <div className="col-md-3 pb-2" id="footer-links">
+            <div className="col-md-2 pb-2" id="footer-links">
               <h6 className="title">NEWS</h6>
               <p className="footer-items">
                 <a href="/blogs">BLOG</a>
@@ -57,6 +56,14 @@ const Footer = () => {
               <p className="footer-items">
                 <a href="#">STAY CONNECTED</a>{" "}
               </p>
+            </div>
+            <div className="col-md-2 pb-2" id="footer-links">
+              <img
+                width="65%"
+                height="85%"
+                src={"../static/images/vetownedbiz.png"}
+                alt="Veteran Owned Business logo"
+              ></img>
             </div>
           </div>
         </div>

@@ -134,7 +134,7 @@ const CreateBlog = ({ router }) => {
   const handleTagsToggle = (t) => () => {
     setValues({ ...values, error: "error" });
 
-    const clickedTag = checked.indexOf(t);
+    const clickedTag = checkedTag.indexOf(t);
     const all = [...checkedTag];
 
     if (clickedTag === -1) {

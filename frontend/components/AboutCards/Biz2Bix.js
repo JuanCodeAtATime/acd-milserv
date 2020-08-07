@@ -27,7 +27,7 @@ export default function Biz2Biz() {
       s={6}
       md={3}
       className="card"
-      style={{ position: "relative" }}
+      style={{ position: "relative", opacity: 1 }}
     >
       <CardContent>
         <CardMedia title="Veterans Card">

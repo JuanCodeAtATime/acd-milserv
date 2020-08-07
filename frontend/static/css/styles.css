@@ -21,9 +21,8 @@ h2.about-header {
   font-weight: 3rem;
   text-shadow: 1.85px 1.85px 2px darkred;
 }
-
 #landing-cta {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-top: 3rem;
 }
@@ -43,12 +42,13 @@ h2.about-header {
 }
 /* About Page */
 .aboutPage {
-  height: 650px;
+  height: 450px;
   width: 100%;
   background-image: url("../images/landing-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  border-bottom: solid whitesmoke 2px;
 }
 
 .staffPage {
@@ -72,8 +72,8 @@ h2.about-header {
 }
 
 .about-where-btn {
-  border: solid white 1px;
-  color: white;
+  border: solid #383838 1px;
+  color: #383838;
   padding: 8px;
   border-radius: 8px;
   background-color: transparent;
