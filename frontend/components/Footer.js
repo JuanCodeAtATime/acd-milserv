@@ -19,7 +19,7 @@ const Footer = () => {
                 </Link>
               )}
             </div>
-            <div className="col-md-3 pb-2" id="footer-links">
+            <div className="col-md-2 pb-2" id="footer-links">
               <h6 className="title">PARTNERS</h6>
               <p className="footer-items">
                 <a href="#">MAKERS</a>
@@ -36,31 +36,38 @@ const Footer = () => {
               <p className="footer-items">
                 <a href="/veteran-jobs">JOBS</a>
               </p>
-              <p className="footer-items">
-                <a href="#">SKILLBRIDGE</a>
-              </p>
+
               <p className="footer-items">
                 {" "}
                 <a href="#">GIVING BACK</a>
               </p>
             </div>
-            <div className="col-md-2 pb-2" id="footer-links">
+            <div className="col-md-2 pb-2 mr-0 pr-0" id="footer-links">
               <h6 className="title">NEWS</h6>
               <p className="footer-items">
-                <a href="/blogs">BLOG</a>
+                <a href="/blogs">MILSERV MEDIA</a>
               </p>
               <p className="footer-items">
                 {" "}
-                <a href="#">PRESS RELEASES</a>{" "}
+                <a href="/blogs">PRESS RELEASES</a>{" "}
               </p>
               <p className="footer-items">
                 <a href="#">STAY CONNECTED</a>{" "}
               </p>
             </div>
-            <div className="col-md-2 pb-2" id="footer-links">
+            <div className="col-md-1 pb-2" id="footer-links">
+              <a href="https://dodskillbridge.usalearning.gov/index.htm">
+                <img
+                  width="120px"
+                  height="74px"
+                  src={"../static/images/skillbridge.png"}
+                  alt="Veteran Owned Business logo"
+                ></img>
+              </a>
+            </div>
+            <div className="col-md-2" id="footer-links">
               <img
-                width="65%"
-                height="85%"
+                width="100px"
                 src={"../static/images/vetownedbiz.png"}
                 alt="Veteran Owned Business logo"
               ></img>

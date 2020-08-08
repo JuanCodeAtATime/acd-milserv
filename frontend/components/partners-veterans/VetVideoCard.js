@@ -40,9 +40,12 @@ export default function VetVideoCard() {
             fontWeight: 600,
           }}
         >
-          <em>Click on location to learn more!</em>
+          <em>
+            Contact us today to learn more <br />
+            about opportunities at these locations
+          </em>
         </p>
-        <button className="btn btn-primary">Maryland</button>{" "}
+        <div className="btn btn-primary">Maryland</div>{" "}
         <button className="btn btn-danger">Texas</button>{" "}
         <button className="btn btn-success">New York</button>
       </section>

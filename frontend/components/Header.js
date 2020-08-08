@@ -81,8 +81,7 @@ const Header = (props) => {
                 <Link href="/veteran-jobs">
                   <DropdownItem>JOBS</DropdownItem>
                 </Link>
-
-                <DropdownItem>SKILLBRIDGE</DropdownItem>
+                {/* <DropdownItem>SKILLBRIDGE</DropdownItem> */}
                 <DropdownItem>GIVING BACK</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
