@@ -117,24 +117,26 @@ const Index = () => {
                 <li className="pr-2">
                   <a href="/veteran-jobs">
                     {" "}
-                    <button className="btn btn-danger">Veterans</button>
+                    <button className="btn btn-outline-light">Veterans</button>
                   </a>
                 </li>
 
                 <li className="pr-2">
-                  <a href="retailers">
-                    <button className="btn btn-danger">Retailers</button>
+                  <a href="/retailers">
+                    <button className="btn btn-outline-light">Retailers</button>
                   </a>
                 </li>
                 <li className="pr-2">
-                  <a href="distributors">
-                    <button className="btn btn-danger">Distributors</button>
+                  <a href="/distributors">
+                    <button className="btn btn-outline-light">
+                      Distributors
+                    </button>
                   </a>
                 </li>
                 <li className="pr-2">
                   <a href="makers">
                     {" "}
-                    <button className="btn btn-danger">Makers</button>
+                    <button className="btn btn-outline-light">Makers</button>
                   </a>
                 </li>
               </ul>

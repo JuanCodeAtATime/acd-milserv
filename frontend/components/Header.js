@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 // import { APP_NAME } from "../config";
+
 import { signout, isAuth } from "../actions/auth";
 import Router from "next/router";
 import NProgress from "nprogress";
@@ -21,6 +22,7 @@ import {
 } from "reactstrap";
 
 import ".././node_modules/nprogress/nprogress.css";
+import Search from "../components/blog/Search";
 
 Router.onRouteChangeStart = (url) => NProgress.start();
 Router.onRouteChangeComplete = (url) => NProgress.done();
@@ -31,7 +33,7 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <React.Fragment>
       <Navbar fixed="top" color="light" light expand="md" className="navbar">
         <Link href="/">
           <NavLink className="font-weight-bold">
@@ -138,7 +140,8 @@ const Header = (props) => {
           {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
       </Navbar>
-    </div>
+      <Search />
+    </React.Fragment>
   );
 };
 

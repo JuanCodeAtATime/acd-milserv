@@ -90,7 +90,8 @@ const SingleBlog = ({ blog, query }) => {
                   <img
                     src={`${API}/blog/photo/${blog.slug}`}
                     alt={blog.title}
-                    className="img img-fluid featured-image"
+                    className="img"
+                    width="300px"
                   />
                 </div>
               </section>
@@ -104,12 +105,11 @@ const SingleBlog = ({ blog, query }) => {
                     Written by {blog.postedBy.name} | Published{" "}
                     {moment(blog.updatedAt).fromNow()}
                   </p>
-                </div>
-
-                <div className="pb-3">
-                  {showBlogCategories(blog)}
-                  {showBlogTags(blog)}
-                  <br></br>
+                  <div className="pb-3">
+                    {showBlogCategories(blog)}
+                    {showBlogTags(blog)}
+                    <br></br>
+                  </div>
                 </div>
               </section>
             </div>
