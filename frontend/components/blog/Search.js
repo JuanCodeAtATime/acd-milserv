@@ -11,6 +11,7 @@ const Search = () => {
     message: "",
   });
   const { search, results, searched, message } = values;
+
   const searchSubmit = (e) => {
     e.preventDefault();
     listSearch({ search }).then((data) => {
@@ -33,8 +34,16 @@ const Search = () => {
   };
   const searchedBlogs = (results = []) => {
     return (
-      <div className="jumbotron bg-white">
-        {message && <p className="pt-4 text-muted font-italic"></p>}
+      <div
+        className="jumbotron bg-white"
+        style={{
+          color: "black",
+          marginTop: 50,
+          height: "auto",
+          marginBottom: 30,
+        }}
+      >
+        {message && <p className="pt-4 text-muted font-italic">{message}</p>}
 
         {results.map((blog, i) => {
           return (
@@ -42,6 +51,7 @@ const Search = () => {
               <Link href={`/blogs/${blog.slug}`}>
                 <a className="text-primary">{blog.title}</a>
               </Link>
+              <hr />
             </div>
           );
         })}
@@ -50,8 +60,8 @@ const Search = () => {
   };
   const searchForm = () => (
     <form onSubmit={searchSubmit} style={{ paddingTop: 70 }}>
-      <div className="row ml-2">
-        <div className="col-md-6 m-1">
+      <div className="row">
+        <div className="col-md-8">
           <input
             type="search"
             className="form-control"
@@ -74,7 +84,7 @@ const Search = () => {
       <div className="pt-3 pb-2">{searchForm()}</div>
       {searched && (
         <div style={{ marginTop: "-120px", marginBottom: "-80px" }}>
-          {searchedBlogs()}{" "}
+          {searchedBlogs(results)}{" "}
         </div>
       )}
     </div>
