@@ -43,7 +43,9 @@ const Search = () => {
           marginBottom: 30,
         }}
       >
-        {message && <p className="pt-4 text-muted font-italic">{message}</p>}
+        {message && (
+          <p className="pt-4 text-muted font-italic mt-3">{message}</p>
+        )}
 
         {results.map((blog, i) => {
           return (
@@ -59,9 +61,12 @@ const Search = () => {
     );
   };
   const searchForm = () => (
-    <form onSubmit={searchSubmit} style={{ paddingTop: 70 }}>
+    <form
+      onSubmit={searchSubmit}
+      style={{ paddingTop: 70, textAlign: "right" }}
+    >
       <div className="row justify-content-right">
-        <div className="col-md-8 m-1">
+        <div className="col-md-7 m-1">
           <input
             type="search"
             className="form-control"
@@ -70,7 +75,7 @@ const Search = () => {
           ></input>
         </div>
 
-        <div className="col-md-2 m-1">
+        <div className="col-md-3 m-1">
           <button className="btn btn-block btn-danger" type="submit">
             Search
           </button>
