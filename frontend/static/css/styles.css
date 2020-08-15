@@ -22,9 +22,9 @@ h2.about-header {
   text-shadow: 1.85px 1.85px 2px darkred;
 }
 #landing-cta {
-  font-size: 4rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-top: 3rem;
+  margin: 1rem;
 }
 
 .headers {
@@ -143,13 +143,7 @@ h2.about-header {
   justify-content: center !important;
 }
 .centered {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.65);
-  margin-top: 3rem;
-  padding: 0.25rem 2rem;
 }
 
 .learnMore:hover {
@@ -415,7 +409,7 @@ Footer styles */
   left: 0 !important;
   bottom: 0 !important;
   right: 0 !important;
-  background-color: #8d54b5;
+  background-color: white;
 }
 
 .footer-container {
@@ -426,7 +420,7 @@ Footer styles */
 a.footer-links:visited,
 a.footer-links:hover,
 a.footer-links:link {
-  color: whitesmoke !important;
+  color: #383838 !important;
   text-decoration: none !important;
   font-weight: 500;
   font-stretch: normal;
@@ -440,6 +434,7 @@ a.footer-links:link {
 .footer-items {
   line-height: 0.85;
   cursor: pointer;
+  color: #383838;
 }
 
 .footer-items:hover {
@@ -449,7 +444,7 @@ a.footer-links:link {
 
 #footer-links a {
   text-decoration: none !important;
-  color: inherit;
+  color: #383838;
   font-weight: 300;
 }
 
@@ -460,6 +455,7 @@ p.staff-signin {
 
 h6.title {
   font-weight: 700;
+  color: #383838;
 }
 
 /* Sign in and Register pages  */

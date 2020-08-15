@@ -8,10 +8,11 @@ const Footer = () => {
       <footer color="blue" className="font-small pt-4 mt-4 pb-4">
         <div className="footer-container">
           <div className="row text-center">
-            <div className="col-md-3 pb-2">
-              <h3 className="title">MILSERV</h3>
-              <p>
-                Copyright <span>&copy;</span> ACD MILSERV 2020{" "}
+            <div className="col-md-3 pb-2 footerLogo">
+              <h3 style={{ color: "#8d54b5" }}>MILSERV</h3>
+              <p style={{ color: "#8d54b5" }}>
+                Copyright <span>&copy;</span>MILSERV <br /> American Craft
+                Deliveries, Corp 2020{" "}
               </p>
               {!isAuth() && (
                 <Link href="/signin">

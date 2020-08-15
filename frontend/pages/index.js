@@ -12,15 +12,33 @@ const Index = () => {
   return (
     <Layout>
       <section className="landingTop ml-0 pl-0">
-        <div className="row centered">
-          <h1 className="landing-cta" id="landing-cta">
-            YOUR SOLUTION FOR ALCOHOL DELIVERIES
-          </h1>
-          <a href="/about">
+        <div className="row justify-content-center">
+          <div
+            className="col-md-4 centered"
+            style={{
+              marginTop: 70,
+              textAlign: "center",
+              paddingTop: 10,
+              borderRadius: 8,
+            }}
+          >
+            <div className="m-2" style={{ borderRadius: 8 }}>
+              <img
+                className="text-center"
+                src={"../static/images/owllogo.jpg"}
+                width="40%"
+                height="40%"
+              ></img>
+            </div>
+            <h1 className="landing-cta" id="landing-cta">
+              YOUR SOLUTION FOR ALCOHOL DELIVERIES
+            </h1>
+            {/* <a href="/about">
             <button className="btn learnMoreBtn ml-1">
               <FontAwesomeIcon icon={faTruck} /> Learn More
             </button>
-          </a>
+          </a> */}
+          </div>
         </div>
       </section>
       <section style={{ paddingBottom: 20 }}>
