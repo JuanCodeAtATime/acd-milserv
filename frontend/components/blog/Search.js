@@ -19,7 +19,7 @@ const Search = () => {
         ...values,
         results: data,
         searched: true,
-        message: `${data.length} articles found`,
+        message: `${data.length} Article(s) found`,
       });
     });
   };
@@ -51,7 +51,14 @@ const Search = () => {
           return (
             <div key={i}>
               <Link href={`/blogs/${blog.slug}`}>
-                <a className="text-primary">{blog.title}</a>
+                <ul>
+                  <li>
+                    {" "}
+                    <a className="text-primary" style={{ cursor: "pointer" }}>
+                      {blog.title}
+                    </a>
+                  </li>
+                </ul>
               </Link>
               <hr />
             </div>
