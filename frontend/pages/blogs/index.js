@@ -123,28 +123,40 @@ const Blogs = ({
         <main>
           <div className="container-fluid mt-4 pt-4">
             <header>
-              <div className="col-md-12 pt-3 mt-4">
-                <h3 className="display-4 text-center">MILSERV NEWS</h3>
+              <div
+                className="col-md-12 pt-2 mt-2 mb-2 pb-2"
+                style={{
+                  backgroundColor: "#383838",
+                  borderRadius: 8,
+                }}
+              >
+                <h1
+                  className="text-center landing-cta"
+                  style={{ fontSize: "4rem" }}
+                >
+                  MILSERV MEDIA
+                </h1>
               </div>
             </header>
           </div>
           <div className="container-fluid">
             <div
-              className="row text-center mt-2 mb-1"
+              className="row text-center mt-1 mb-1 justify-content-center"
               style={{ paddingTop: "45px", paddingBottom: "90px" }}
             >
-              <div className="col-md-6 pb-3">
+              <div className="col-md-4 pb-3">
                 <h5 style={{ fontWeight: "400", marginBottom: "0px" }}>
                   categories
                 </h5>
                 {showAllCategories()}
               </div>
 
-              <div className="col-md-6">
+              <div className="col-md-4">
                 <h5 style={{ fontWeight: "400", marginBottom: "0px" }}>tags</h5>
                 {showAllTags()}
               </div>
             </div>
+            <hr />
 
             <div className="row pl-3">
               <div

@@ -68,12 +68,12 @@ const Search = () => {
     );
   };
   const searchForm = () => (
-    <form
-      onSubmit={searchSubmit}
-      style={{ paddingTop: 70, textAlign: "right" }}
-    >
-      <div className="row justify-content-right">
-        <div className="col-md-7 m-1">
+    <form onSubmit={searchSubmit} style={{ paddingTop: 70 }}>
+      <div
+        className="row justify-content-center mb-1"
+        style={{ textAlign: "right", justifyContent: "end" }}
+      >
+        <div className="col-md-5 m-1">
           <input
             type="search"
             className="form-control"
@@ -82,7 +82,7 @@ const Search = () => {
           ></input>
         </div>
 
-        <div className="col-md-3 m-1">
+        <div className="col-md-2 m-1">
           <button className="btn btn-block btn-danger" type="submit">
             Search
           </button>

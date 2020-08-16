@@ -7,7 +7,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Link from "next/link";
 
 const useStyles = makeStyles({
   root: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BlogCard() {
+export default function VeteranCard() {
   const classes = useStyles();
 
   return (
@@ -24,37 +23,27 @@ export default function BlogCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Person typing on laptop"
+          alt="Military Uniform"
           height="140"
-          image="../../static/images/blog-image.jpg"
-          title="Write or Create"
+          image="../../static/images/veteranphoto.jpg"
+          title="Veteran Talent Tracker"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            MILSERV NEWS
+            VETERAN TALENT
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Write a blog or press release to keep customers and stakeholders
-            informed.
+            View, track, and manage Veteran talent pipeline data.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <a href="/admin/blog">
-          <Button size="small" color="primary">
-            Write
-          </Button>
-        </a>
-        <a href="/admin/blogs">
-          <Button size="small" color="primary">
-            Update
-          </Button>
-        </a>
-        <a href="/admin/crud/category-tag">
-          <Button size="small" color="primary">
-            Create
-          </Button>
-        </a>
+        <Button size="small" color="primary">
+          <a href="/admin/veteran-list">View</a>
+        </Button>
+        <Button size="small" color="primary">
+          Manage
+        </Button>
       </CardActions>
     </Card>
   );

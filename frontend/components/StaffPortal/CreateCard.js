@@ -7,16 +7,14 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Link from "next/link";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    marginBottom: 20,
   },
 });
 
-export default function BlogCard() {
+export default function CreateCard() {
   const classes = useStyles();
 
   return (
@@ -24,37 +22,28 @@ export default function BlogCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Person typing on laptop"
+          alt="Contemplative Reptile"
           height="140"
-          image="../../static/images/blog-image.jpg"
-          title="Write or Create"
+          image="/static/images/cards/contemplative-reptile.jpg"
+          title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            MILSERV NEWS
+            Lizard
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Write a blog or press release to keep customers and stakeholders
-            informed.
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <a href="/admin/blog">
-          <Button size="small" color="primary">
-            Write
-          </Button>
-        </a>
-        <a href="/admin/blogs">
-          <Button size="small" color="primary">
-            Update
-          </Button>
-        </a>
-        <a href="/admin/crud/category-tag">
-          <Button size="small" color="primary">
-            Create
-          </Button>
-        </a>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
       </CardActions>
     </Card>
   );

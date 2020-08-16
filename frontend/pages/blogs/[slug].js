@@ -86,7 +86,7 @@ const SingleBlog = ({ blog, query }) => {
           <article style={{ marginTop: "100px" }}>
             <div className="container-fluid">
               <section>
-                <div className="row">
+                <div className="row justify-content-center">
                   <img
                     src={`${API}/blog/photo/${blog.slug}`}
                     alt={blog.title}
@@ -98,12 +98,15 @@ const SingleBlog = ({ blog, query }) => {
 
               <section>
                 <div className="container">
-                  <h1 className="display-4 pb-3 pt-3 font-weight-bold">
+                  <h1 className="display-4 pb-3 pt-3 font-weight-bold text-center">
                     {blog.title}
                   </h1>
                   <p className="lead mt-3 mark pt-1 pb-1">
                     Written by{" "}
-                    <Link href={`/profile/${blog.postedBy.username}`}>
+                    <Link
+                      href={`/profile/${blog.postedBy.username}`}
+                      prefetch={false}
+                    >
                       <a>{blog.postedBy.username}</a>
                     </Link>
                     | Published {moment(blog.updatedAt).fromNow()}

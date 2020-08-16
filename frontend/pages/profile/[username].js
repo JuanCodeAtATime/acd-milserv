@@ -53,13 +53,25 @@ const UserProfile = ({ user, blogs, query }) => {
             <div className="col-md-12">
               <div className="card">
                 <div className="card-body">
-                  <h5>{user.name}</h5>
-                  <Link href={`${user.profile}`}>
-                    <a>View Profile</a>
-                  </Link>
-                  <p className="text-muted">
-                    Joined {moment(user.createdAt).fromNow()}
-                  </p>
+                  <div className="row">
+                    <div className="col-md-8">
+                      <img
+                        src={`${API}/user/photo/${user.username}`}
+                        className="img img-fluid img-thumbnail mb-3"
+                        style={{ maxHeight: "100px", maxWidth: "100%" }}
+                        alt="user profile"
+                      />
+                      <h5 style={{ color: "black" }}>{user.name}</h5>
+
+                      <p className="text-muted">
+                        Joined {moment(user.createdAt).fromNow()}
+                      </p>
+                    </div>
+
+                    {/* <div className="col-md-4">
+                     
+                    </div> */}
+                  </div>
                 </div>
               </div>
             </div>
@@ -69,24 +81,30 @@ const UserProfile = ({ user, blogs, query }) => {
         <div className="container pb-5">
           <div className="row">
             <div className="col-md-6">
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title bg-primary pt-4 pb-4pl-4 pr-4">
-                    Recent blogs by {user.name}
+              <div style={{ height: "auto", paddingBottom: 15 }}>
+                <div className="card-body" style={{ height: "auto" }}>
+                  <h5
+                    className="card-title pt-4 pb-4 pl-4 pr-4"
+                    style={{ backgroundColor: "#8d54b5", color: "white" }}
+                  >
+                    Recent articles by {user.name}
                   </h5>
-                  <br />
-                  <p>{showUserBlogs()}</p>
+
+                  <p className="pl-3">{showUserBlogs()}</p>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title bg-primary pt-4 pb-4pl-4 pr-4">
+              <div style={{ height: "auto", paddingBottom: 15 }}>
+                <div className="card-body" style={{ height: "auto" }}>
+                  <h5
+                    className="card-title pt-4 pb-4 pl-4 pr-4"
+                    style={{ backgroundColor: "#8d54b5", color: "white" }}
+                  >
                     Message {user.name}
                   </h5>
                   <br />
-                  <p>contac form</p>
+                  <p style={{ color: "black" }}>contact form</p>
                 </div>
               </div>
             </div>

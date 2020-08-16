@@ -7,7 +7,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Link from "next/link";
 
 const useStyles = makeStyles({
   root: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BlogCard() {
+export default function ManageCard() {
   const classes = useStyles();
 
   return (
@@ -24,37 +23,30 @@ export default function BlogCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Person typing on laptop"
+          alt="Array of alcoholic beverages"
           height="140"
-          image="../../static/images/blog-image.jpg"
-          title="Write or Create"
+          image="../../static/images/landing-image.jpg"
+          title="Partners"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            MILSERV NEWS
+            PARTNERS
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Write a blog or press release to keep customers and stakeholders
-            informed.
+            Track data from Maker, Retailer, and Distributor Partners.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <a href="/admin/blog">
-          <Button size="small" color="primary">
-            Write
-          </Button>
-        </a>
-        <a href="/admin/blogs">
-          <Button size="small" color="primary">
-            Update
-          </Button>
-        </a>
-        <a href="/admin/crud/category-tag">
-          <Button size="small" color="primary">
-            Create
-          </Button>
-        </a>
+        <Button size="small" color="primary">
+          <a href="/admin/retailer-list">Retailers</a>
+        </Button>
+        <Button size="small" color="primary">
+          <a href="/admin/retailer-list">Makers</a>
+        </Button>
+        <Button size="small" color="primary">
+          <a href="/admin/distributor-list">Distributors</a>
+        </Button>
       </CardActions>
     </Card>
   );
