@@ -27,6 +27,7 @@ const tagRoutes = require("./routes/tag");
 const veteranRoutes = require("./routes/veteran");
 const retailerRoutes = require("./routes/retailer");
 const distributorRoutes = require("./routes/distributor");
+const formRoutes = require("./routes/form");
 
 //app
 const app = express();
@@ -59,6 +60,7 @@ app.use("/api", tagRoutes);
 app.use("/api", veteranRoutes);
 app.use("/api", retailerRoutes);
 app.use("/api", distributorRoutes);
+app.use("/api", formRoutes);
 
 //port
 const port = process.env.PORT || 8000;

@@ -51,6 +51,15 @@ h2.about-header {
   border-bottom: solid whitesmoke 2px;
 }
 
+.milservMedia {
+  width: 100%;
+  height: 300px;
+  background-image: url("../images/landing-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .staffPage {
   min-height: 650px;
   width: 100%;
@@ -215,6 +224,11 @@ a:hover {
 .navbar {
   background-color: white !important;
   color: #8d54b5 !important;
+  padding-bottom: 0;
+}
+
+.searchBar {
+  background-color: transparent !important;
 }
 
 /* 

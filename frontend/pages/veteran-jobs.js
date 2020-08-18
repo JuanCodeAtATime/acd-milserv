@@ -98,8 +98,8 @@ const VeteranJobs = () => {
               MilServ is a proud industry parnter of the DOD SkillBridge
               program. Through this partnership, we're committed to providing
               transitioning servicemembers early access to civilian work
-              experience, skills, and, of course, extra pay. Let's get your
-              civilian career going! Contact us today to learn more.
+              experience and skills. Let's get your civilian career going!
+              Contact us today to learn more.
             </p>
 
             <p></p>

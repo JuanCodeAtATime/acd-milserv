@@ -38,7 +38,7 @@ const Search = () => {
         className="jumbotron bg-white"
         style={{
           color: "black",
-          marginTop: 50,
+          marginTop: 30,
           height: "auto",
           marginBottom: 30,
         }}
@@ -83,7 +83,11 @@ const Search = () => {
         </div>
 
         <div className="col-md-2 m-1">
-          <button className="btn btn-block btn-danger" type="submit">
+          <button
+            className="btn btn-block"
+            type="submit"
+            style={{ backgroundColor: "#8d54b5", color: "white" }}
+          >
             Search
           </button>
         </div>

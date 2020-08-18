@@ -140,7 +140,7 @@ const Header = (props) => {
           {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
       </Navbar>
-      <Search style={{ position: "absolute" }} />
+      <Search style={{ backgroundColor: "transparent" }} />
     </React.Fragment>
   );
 };
