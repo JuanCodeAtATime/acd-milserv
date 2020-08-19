@@ -95,7 +95,7 @@ const Blogs = ({
   const showAllCategories = () => {
     return categories.map((c, i) => (
       <Link href={`/categories/${c.slug}`} key={i}>
-        <a className="btn btn-outline-info btn-sm mr-1 ml-1 mt-3">{c.name}</a>
+        <a className="btn btn-info btn-sm mr-1 ml-1 mt-3">{c.name}</a>
       </Link>
     ));
   };
@@ -103,7 +103,7 @@ const Blogs = ({
   const showAllTags = () => {
     return tags.map((t, i) => (
       <Link href={`/tags/${t.slug}`} key={i}>
-        <a className="btn btn-outline-danger btn-sm mr-1 ml-1 mt-3">{t.name}</a>
+        <a className="btn btn-warning btn-sm mr-1 ml-1 mt-3">{t.name}</a>
       </Link>
     ));
   };
@@ -121,41 +121,67 @@ const Blogs = ({
       {head()}
       <Layout>
         <main>
-          <div className="container-fluid mt-4 pt-4">
-            <header>
-              <div
-                className="col-md-12 pt-2 mt-2 mb-2 pb-2"
-                style={{
-                  backgroundColor: "#383838",
-                  borderRadius: 8,
-                }}
-              >
-                <h1
-                  className="text-center landing-cta"
-                  style={{ fontSize: "4rem" }}
+          <div className="container-fluid mt-1 pt-4">
+            <header
+              className="milservMedia container"
+              style={{
+                height: 550,
+              }}
+            >
+              <div className="row">
+                <div className="col-md-12 pt-4 mt-4 mb-2 pb-2">
+                  <h1
+                    className="text-center landing-cta"
+                    style={{ fontSize: "4rem", marginBottom: 35 }}
+                  >
+                    MILSERV MEDIA
+                  </h1>
+                </div>
+              </div>
+              <div className="row justify-content-center">
+                <div
+                  className="col-md-4"
+                  style={{
+                    textAlign: "center",
+                    marginBottom: 25,
+                  }}
                 >
-                  MILSERV MEDIA
-                </h1>
+                  <h5
+                    style={{
+                      fontWeight: "900",
+                      backgroundColor: "rgba(0,0,0,0.50)",
+                      padding: 5,
+                      color: "white",
+                    }}
+                  >
+                    CATEGORIES
+                  </h5>
+                  {showAllCategories()}
+                </div>
+
+                <div
+                  className="col-md-4"
+                  style={{
+                    textAlign: "center",
+                  }}
+                >
+                  <h5
+                    style={{
+                      fontWeight: "900",
+                      marginBottom: "0px",
+                      backgroundColor: "rgba(0,0,0,0.50)",
+                      padding: 5,
+                      color: "white",
+                    }}
+                  >
+                    TAGS
+                  </h5>
+                  {showAllTags()}
+                </div>
               </div>
             </header>
           </div>
           <div className="container-fluid">
-            <div
-              className="row text-center mt-1 mb-1 justify-content-center"
-              style={{ paddingTop: "45px", paddingBottom: "90px" }}
-            >
-              <div className="col-md-4 pb-3">
-                <h5 style={{ fontWeight: "400", marginBottom: "0px" }}>
-                  categories
-                </h5>
-                {showAllCategories()}
-              </div>
-
-              <div className="col-md-4">
-                <h5 style={{ fontWeight: "400", marginBottom: "0px" }}>tags</h5>
-                {showAllTags()}
-              </div>
-            </div>
             <hr />
 
             <div className="row pl-3">

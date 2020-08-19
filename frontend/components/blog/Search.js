@@ -44,7 +44,9 @@ const Search = () => {
         }}
       >
         {message && (
-          <p className="pt-4 text-muted font-italic mt-3">{message}</p>
+          <p className="text-muted font-italic mt-3" style={{ paddingTop: 15 }}>
+            {message}
+          </p>
         )}
 
         {results.map((blog, i) => {
@@ -68,7 +70,10 @@ const Search = () => {
     );
   };
   const searchForm = () => (
-    <form onSubmit={searchSubmit} style={{ paddingTop: 70 }}>
+    <form
+      onSubmit={searchSubmit}
+      style={{ paddingTop: 70, backgroundColor: "transparent" }}
+    >
       <div
         className="row justify-content-center mb-1"
         style={{ textAlign: "right", justifyContent: "end" }}
@@ -76,7 +81,8 @@ const Search = () => {
         <div className="col-md-5 m-1">
           <input
             type="search"
-            className="form-control"
+            style={{ backgroundColor: "#383838", color: "white" }}
+            className="form-control search-form"
             placeholder="Search MilServ Media"
             onChange={handleChange}
           ></input>
@@ -86,7 +92,11 @@ const Search = () => {
           <button
             className="btn btn-block"
             type="submit"
-            style={{ backgroundColor: "#8d54b5", color: "white" }}
+            style={{
+              backgroundColor: "#8d54b5",
+              color: "white",
+              marginBottom: 15,
+            }}
           >
             Search
           </button>

@@ -12,11 +12,11 @@ const Index = () => {
   return (
     <Layout>
       <section className="landingTop ml-0 pl-0">
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" style={{ width: "100%" }}>
           <div
             className="col-md-4 centered"
             style={{
-              marginTop: 70,
+              marginTop: 100,
               textAlign: "center",
               paddingTop: 10,
               borderRadius: 8,

@@ -3,11 +3,11 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.contactForm = (req, res) => {
   const { email, name, message } = req.body;
-  // console.log(req.body)
+  console.log(req.body);
 
   const emailData = {
     to: process.env.EMAIL_TO,
-    from: req.body.email,
+    from: email,
     subject: `Contact form - ${process.env.APP_NAME}`,
     text: `Email received from contact from \n Sender name: ${name} \n Sender email: ${email} \n Sender message: ${message}`,
     html: `
@@ -19,11 +19,22 @@ exports.contactForm = (req, res) => {
         <p>This email may contain sensitive information</p>`,
   };
 
-  sgMail.send(emailData).then((sent) => {
-    return res.json({
-      success: true,
+  //   sgMail.send(emailData).then((sent) => {
+  //     return res.json({
+  //       success: true,
+  //     });
+  //   });
+  // };
+
+  sgMail
+    .send(emailData)
+    .then((sent) => {
+      console.log("Message sent");
+    })
+    .catch((error) => {
+      console.log(error.response.body);
+      // console.log(error.response.body.errors[0].message)
     });
-  });
 };
 
 exports.contactMilServAuthorForm = (req, res) => {

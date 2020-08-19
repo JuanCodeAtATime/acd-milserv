@@ -44,6 +44,7 @@ const Header = (props) => {
                 width="45px"
                 height="40px"
                 alt="React Bootstrap logo"
+                style={{ paddingRight: 2, borderRadius: 10 }}
               />
               MILSERV
               <span className="bottom-logo-text">
@@ -140,7 +141,7 @@ const Header = (props) => {
           {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
       </Navbar>
-      <Search style={{ backgroundColor: "transparent" }} />
+      <Search />
     </React.Fragment>
   );
 };

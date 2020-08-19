@@ -95,11 +95,19 @@ const SingleBlog = ({ blog, query }) => {
     <React.Fragment>
       {head()}
       <Layout>
-        <main style={{ minHeight: "500px" }}>
+        <main
+          style={{
+            minHeight: "500px",
+            borderTop: "solid rgba(141, 84, 181, 0.85) 1.8px",
+          }}
+        >
           <article style={{ marginTop: "100px" }}>
             <div className="container-fluid">
               <section>
                 <div className="row justify-content-center">
+                  <h1 className="pb-3 pt-3 font-weight-bold text-center">
+                    {blog.title}
+                  </h1>
                   <img
                     src={`${API}/blog/photo/${blog.slug}`}
                     alt={blog.title}
@@ -111,16 +119,16 @@ const SingleBlog = ({ blog, query }) => {
 
               <section>
                 <div className="container">
-                  <h1 className="display-4 pb-3 pt-3 font-weight-bold text-center">
-                    {blog.title}
-                  </h1>
                   <p className="lead mt-3 mark pt-1 pb-1">
                     Written by{" "}
                     <Link
                       href={`/profile/${blog.postedBy.username}`}
                       prefetch={false}
                     >
-                      <a>{blog.postedBy.username}</a>
+                      <a>
+                        {""}
+                        {blog.postedBy.username}
+                      </a>
                     </Link>
                     | Published {moment(blog.updatedAt).fromNow()}
                   </p>
