@@ -109,14 +109,14 @@ const Header = (props) => {
               <NavItem className="listItems">ABOUT</NavItem>
             </Link>
 
-            {isAuth() && isAuth().role === 0 && (
+            {/* {isAuth() && isAuth().role === 0 && (
               <Link href="/user">
                 <NavItem className="listItems">
                   {" "}
                   {`${isAuth().name}'s Portal`}
                 </NavItem>
               </Link>
-            )}
+            )} */}
 
             {isAuth() && isAuth().role === 1 && (
               <Link href="/admin">
