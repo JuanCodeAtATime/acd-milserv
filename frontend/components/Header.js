@@ -36,7 +36,7 @@ const Header = (props) => {
     <React.Fragment>
       <Navbar fixed="top" color="light" light expand="md" className="navbar">
         <Link href="/">
-          <NavLink className="font-weight-bold">
+          <NavLink className="font-weight-bold pt-1 pb-0">
             <NavbarBrand className="navBarLogo">
               <img
                 //Try makeStyle classes to ref image within file
